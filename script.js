@@ -701,6 +701,7 @@ function menu(opcion) {
 	switch (opcion) {
 		case 'linterna':
 			ReiniciarElementos()
+			ReiniciarCircuito1()
 			document.querySelector('.titulo-circuito').innerHTML = tituloCircuito1
 			pasosCorrectosActividad = 0
 			elementosPermitidosActividadActual = elementosPermitidosActividad1
@@ -710,6 +711,7 @@ function menu(opcion) {
 			break;
 		case 'CircuitoSerie':
 			ReiniciarElementos()
+			ReiniciarCircuito2()
 			document.querySelector('.titulo-circuito').innerHTML = tituloCircuito2
 			pasosCorrectosActividad = 0
 			elementosPermitidosActividadActual = elementosPermitidosActividad2
@@ -835,11 +837,11 @@ function verificarPasosC1() {
 				luzLed.classList.toggle('luz-led-on')
 			}, false)
 
-			
+
 			tippy(`#conexionPilac1`, {
 				content: 'Clic para unir',
 				theme: 'material',
-	
+
 			});
 			break;
 		default:
@@ -880,11 +882,11 @@ function verificarPasosC2() {
 				portalampara2c1.classList.toggle('portalampara-2-on')
 			}, false)
 
-			
+
 			tippy(`.interruptor`, {
 				content: 'Clic aqui',
 				theme: 'material',
-	
+
 			});
 
 			pasosActividad2.shift()
@@ -928,11 +930,11 @@ function verificarPasosC3() {
 				portalampara1c3.classList.toggle('portalampara-2-c3-on')
 			}, false)
 
-			
+
 			tippy(`.interruptor-c3`, {
 				content: 'Clic aqui',
 				theme: 'material',
-	
+
 			});
 			break;
 		default:
@@ -1015,6 +1017,387 @@ function ReiniciarElementos() {
 	imagenelemento.forEach(element => {
 		element.style.visibility = 'hidden'
 	});
+}
+
+function ReiniciarCircuito1() {
+	elementosPermitidosActividadActual;
+	actividadActual;
+	contadorPilasC1 = 0;
+	contadorCitasC1 = 0;
+	tituloCircuito1 = '¡Construcción de una linterna!'
+	//Configuracion actividad 1
+	nombreElementos = [
+		'Cinta aislante',
+		'Interruptor Palanca',
+		'Pila 9.V',
+		'Pilas doble A',
+		'Porta Pilas',
+		'Led',
+		'Papel aluminio',
+		'Porta lamparas',
+		'Pila',
+		'Pinzas cocodrilo',
+		'Cables Conectores',
+		'Martillo',
+		'Bisturi',
+		'Clips',
+		'Bombillas linterna',
+		'Cinta',
+		'Potenciometro',
+		'Potencimetro nano',
+		'Condesador',
+		'Tijeras',
+		'Pinzas',
+		'Cable conector',
+		'Caja plastica',
+		'Alicate',
+		'Llave',
+		'Destornillador',
+		'Resistencia'
+	]
+
+	pasosCorrectosActividad = 0
+	instruccionesActividade1 = [
+		`<div class="animate__animated animate__fadeIn">
+		<h4>!Vamos a construir una linterna!</h4>
+								<p>Desplazamos del centro de recursos los siguientes elementos:<br>
+								<ul style="text-align: left;">
+									<li>
+									<b>Papel aluminio</b>
+									</li>
+									<li>
+									<b>Dos pilas doble A</b>
+									</li>
+									<li>
+									<b>Un bombillo led </b> 
+									</li>
+									<li>
+									<b>Cinta aislante</b>
+									</li>
+								</ul>
+								<div style="width: 50%;margin:0px auto;"><div onclick="iniciar(1)" id="comenzar" class="button" >Comenzar&nbsp;▶</div></div>
+		</div>`
+	]
+
+	pasosActividad1 = [
+		`<div class="animate__animated animate__fadeIn">
+		<h4>Pasos linterna</h4>
+		 <ol type="a">
+									<li><span>Cortamos dos tiras de papel aluminio de 15 cm de largo por 5 cm de
+											ancho.</span></li>
+									<li><span>Enrrollamos las tiras de papel aluminio de tal manera que nos queden tiras de
+											15 cm de largo.</span></li>
+								</ol>
+			</div>`,
+		`<div class="animate__animated animate__fadeIn">
+			<h4>Pasos linterna</h4>
+			 <ol start="2">
+										<li><span>Unimos las pilas con la cinta aislante teniendo en cuenta que los polos contrarios deben quedar enfrentados.</span></li>
+									</ol>
+				</div>`,
+		`<div>
+				<h4>Pasos linterna</h4>
+				 <ol start="3">
+											<li><span>Unimos cada una de las tiras a cada uno de los extremos del led o bombillo.</span></li>
+										</ol>
+					</div>`,
+		`<div>
+					<h4>Pasos linterna</h4>
+					 <ol start="4">
+												<li><span>Tomamos el extremo libre de una tira y lo pegamos a uno de los polos de la pila.</span></li>
+											</ol>
+						</div>`,
+		`
+					<div class="animate__animated animate__fadeIn">
+			<h4>Pasos</h4>
+			<p>!Muy bien¡</p>
+			<p>Ahora inténtalo, une el extremo libre de la tira a la pila.</p>
+			</div>
+					`
+	]
 
 
+
+
+	areaCollision1 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
+	<div>
+				<div class="contenedor-elementos-area-colision">
+						<div class="luz-led">
+	
+						</div>
+						<div id="aluminio" class="aluminio">
+						
+											</div>
+							
+						</div>
+						<div class="pilas" id="pilas">
+						<div style="
+						display: flex;
+						width: 75%;
+						height: 8vh;
+						justify-content: center;
+						align-items: end;
+						
+					">
+												<div style="
+						
+						width: 86%;
+						height: inherit;
+					">
+												</div>
+												<div id="conexionPilac1" style="
+					width: 13%;
+					height: 8vh;
+					cursor: pointer;
+				
+					">
+												</div>
+						</div>
+						</div>
+						<div class="pilas-cinta" >
+	
+						</div>
+				</div>
+				<div>
+	
+				</div>
+	
+		</div>
+	</div>`
+
+
+
+	elementosPermitidosActividad1 = [
+		'elemento-6',//papel aluminio
+		'elemento-8',//pila1
+		'elemento-8',//pila2
+		'elemento-0',//cinta,
+		'elemento-5',//lled
+		'elemento-0',//cinta
+	]
+
+
+
+	/** Fin configuracion actividad 1 */
+}
+
+
+function ReiniciarCircuito2() {
+tituloCircuito2 = '¡Construyamos un Circuito Serie!'
+contadorCableC2 = 0
+instruccionesActividade2 = [
+	`<div class="animate__animated animate__fadeIn">
+	<h4>!Vamos a diseñar, ensamblar y dibujar un circuito!</h4>
+                            <p>Desplazamos del centro de recursos los siguientes elementos:</p> 
+							<ul style="text-align: left;">
+							<li><b>Dos pilas AA.</b></li>
+							<li><b>Portalámparas.</b></li>
+							<li><b>Dos bombillos para linterna de 3 voltios.</b></li>
+							<li><b>Un portapilas.</b>, <b>Pinzas caimanes.</b></li>
+							<li><b>Un interruptor.</b></li>
+							</ul>
+							<div style="width: 50%;margin:0px auto;"><div onclick="iniciar(2)" id="comenzar" class="button" >Comenzar&nbsp;▶</div></div>
+	</div>`
+]
+
+pasosActividad2 = [
+	`<div class="animate__animated animate__fadeIn">
+	<h4>Pasos</h4>
+	 <ol>
+                                <li><span>Al portapilas le colocamos las pilas AA. Con el cable de pinzas caimán conectamos un extremo al portapilas, y el otro extremo a uno de los terminales del interruptor.</span></li>
+                               
+                            </ol>
+		</div>`,
+	`<div class="animate__animated animate__fadeIn">
+		<h4>Pasos</h4>
+		 <ol start="2">
+									<li><span>Conectamos una pinza caimán, de otro cable, desde un terminal del interruptor a uno de los terminales del portalámparas (nos aseguramos de colocar el bombillo correspondiente previamente).</span></li>
+								</ol>
+			</div>`,
+	`<div>
+			<h4>Pasos</h4>
+			 <ol start="3">
+										<li><span>Conectamos otro cable del terminal del portalámparas a un terminal del segundo portalámparas</span></li>
+									</ol>
+				</div>`,
+	`<div>
+				<h4>Pasos</h4>
+				 <ol start="4">
+											<li><span>Conectamos un cable del otro terminal del segundo portalámparas al otro terminal del portalámparas</span></li>
+										</ol>
+					</div>`,
+	`
+				<div class="animate__animated animate__fadeIn">
+		<h4>Pasos</h4>
+		<p>!Muy bien¡</p>
+		<p>Ahora inténtalo, acciona el interruptor.</p>
+		</div>
+				`
+]
+
+areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
+<div>
+			<div style="
+			width: 86%;
+			height: 44vh;
+			position: absolute;
+			top: 11px;
+			left: 82px;
+			margin: 0px auto;
+		">
+					<div class="portapilas">
+
+					</div>
+					<div class="pilas-c2">
+
+					</div>
+					<div class="cable1">
+
+					</div>
+					<div class="interruptor">
+
+					</div>
+					<div class="cable2">
+
+					</div>
+					<div class="portalampara-1">
+
+					</div>
+					<div class="cable3">
+
+					</div>
+					<div class="portalampara-2">
+
+					</div>
+					<div class="cable4">
+
+		</div>
+			</div>
+			<div>
+
+			</div>
+
+	</div>
+</div>`
+
+
+
+elementosPermitidosActividad2 = [
+	'elemento-4',//Un portapilas.
+	'elemento-3',//Dos pilas AA
+	'elemento-1',//Interruptor
+	'elemento-9',//Pinzas cocodrilo
+	'elemento-7',//Dos Portalámparas
+	'elemento-9',//Pinzas cocodrilo
+	'elemento-9',//Pinzas cocodrilo
+	'elemento-9'//Pinzas cocodrilo
+
+]
+
+}
+
+function ReiniciarCircuito3() {
+	tituloCircuito3 = '¡Circuito mixtos!'
+	contadorCableC3 = 0
+	instruccionesActividade3 = [
+		`<div class="animate__animated animate__fadeIn">
+		<h4>!Vamos a construir el circuito mostrado en el punto 11!</h4>
+								<p>Desplazamos del centro de recursos los siguientes elementos:</p> 
+								<ul style="text-align: left;">
+								<li><b>Pila 9 V.</b></li>
+								<li><b>Un portapilas.</b></li>
+								<li><b>Pinzas caimanes.</b></li>
+								<li><b>Un interruptor.</b></li>
+								<li><b>Un recipiente o caja de jugo.</b></li>
+								</ul>
+								<div style="width: 50%;margin:0px auto;"><div onclick="iniciar(3)" id="comenzar" class="button" >Comenzar&nbsp;▶</div></div>
+		</div>`
+	]
+	
+	pasosActividad3 = [
+		`<div class="animate__animated animate__fadeIn">
+		<h4>Pasos</h4>
+		 <ol>
+									<li><span>Conectamos desde una pila 9V a uno de los cables con pinzas caimán, hasta un interruptor.</span></li>
+								</ol>
+			</div>`,
+		`<div class="animate__animated animate__fadeIn">
+			<h4>Pasos</h4>
+			 <ol start="2">
+										<li><span>Conectamos un cable desde el otro terminal del interruptor a uno de los terminales del portalámparas (nos aseguramos de colocar el bombillo correspondiente previamente).</span></li>
+									</ol>
+				</div>`,
+		`<div>
+				<h4>Pasos</h4>
+				 <ol start="3">
+											<li><span>Dentro de un reciente plástico, colocamos las puntas metálicas de los cables al fondo del recipiente y vamos agregando agua poco a poco para ver qué pasa.</span></li>
+										</ol>
+					</div>`,
+		`<div>
+		<h4>Pasos</h4>
+			<ol start="4">
+									<li><span>Conectamos un cable del recipiente al otro terminal del portapilas.</span></li>
+								</ol>
+			</div>`,
+		`
+					<div class="animate__animated animate__fadeIn">
+			<h4>Pasos</h4>
+			<p>!Muy bien¡</p>
+			<p>Ahora inténtalo, acciona el interruptor.</p>
+			</div>
+					`
+	]
+	
+	areaCollision3 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
+	<div>
+				<div style="
+				width: 86%;
+				height: 44vh;
+				position: absolute;
+				top: 13px;
+				left: 38px;
+				margin: 0px auto;
+			">
+						<div class="pila-cuadrada">
+	
+						</div>
+						<div class="cable1-c3">
+	
+						</div>
+						<div class="caja_plastica">
+	
+						</div>
+						<div class="interruptor-c3">
+	
+						</div>
+						<div class="cable2-c3">
+	
+						</div>
+						<div class="cable3-c3">
+	
+						</div>
+						<div class="portalampara-2-c3">
+	
+						</div>
+						<div class="cable4-c3">
+								
+						</div>
+					</div>
+				<div>
+			</div>
+		</div>
+	</div>`
+	
+	
+	
+	elementosPermitidosActividad3 = [
+		'elemento-2',//pila 9v
+		'elemento-1',//interruptor,
+		'elemento-9',//cable cocodrilo
+		'elemento-7',//lampara,
+		'elemento-9',//cable cocodrilo
+		'elemento-22',//caja plastica
+		'elemento-9',//cable cocodrilo
+		'elemento-9'//cable cocodrilo
+	]
 }

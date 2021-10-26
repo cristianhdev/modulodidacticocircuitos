@@ -53,18 +53,18 @@ ol {
 
 .luz-led {
   display: block;
-    visibility: hidden;
-    width: 86%;
-    height: 37%;
-    background-image: url(./public/assets/Img/Circuito/Led.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    position: absolute;
-    text-align: center;
-    left: 11%;
-    top: 27%;
-    pointer-events: all;
+  visibility: hidden;
+  width: 86%;
+  height: 37%;
+  background-image: url(./public/assets/Img/Circuito/Led.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  text-align: center;
+  left: 11%;
+  top: 27%;
+  pointer-events: all;
 }
 
 .aluminio {
@@ -85,18 +85,18 @@ ol {
 
 .aluminio-2 {
   display: block;
-    visibility: hidden;
-    width: 100%;
-    height: 84%;
-    background-image: url(./public/assets/Img/Animaciones/aluminio2.gif);
-    background-repeat: no-repeat;
-    background-size: 106%;
-    background-position: center center;
-    position: absolute;
-    left: -21px;
-    top: 30%;
-    z-index: -2;
-    pointer-events: all;
+  visibility: hidden;
+  width: 100%;
+  height: 84%;
+  background-image: url(./public/assets/Img/Animaciones/aluminio2.gif);
+  background-repeat: no-repeat;
+  background-size: 106%;
+  background-position: center center;
+  position: absolute;
+  left: -21px;
+  top: 30%;
+  z-index: -2;
+  pointer-events: all;
 }
 
 .pila1 {
@@ -164,16 +164,16 @@ ol {
 
 .pilas-c2 {
   display: block;
-    visibility: hidden;
-    width: 33%;
-    height: 37%;
-    background-image: url(./public/assets/Img/Circuito2/PilasJuntas-c2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    position: absolute;
-    bottom: -7px;
-    left: 17px;
+  visibility: hidden;
+  width: 33%;
+  height: 37%;
+  background-image: url(./public/assets/Img/Circuito2/PilasJuntas-c2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: -7px;
+  left: 17px;
 }
 
 .portapilas {
@@ -192,36 +192,34 @@ ol {
 
 .cable1 {
   display: block;
-    visibility: hidden;
-    width: 33%;
-    height: 57%;
-    background-image: url(./public/assets/Img/Circuito2/cable2.png);
-    background-repeat: no-repeat;
-    background-size: 73%;
-    background-position: center center;
-    position: absolute;
-    top: 65px;
-    left: 20px;
-    transform: rotate( 
-233deg);
-    z-index: -12;
+  visibility: hidden;
+  width: 33%;
+  height: 57%;
+  background-image: url(./public/assets/Img/Circuito2/cable2.png);
+  background-repeat: no-repeat;
+  background-size: 73%;
+  background-position: center center;
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  transform: rotate(233deg);
+  z-index: -12;
 }
 
 .cable2 {
   display: block;
-    visibility: hidden;
-    width: 65%;
-    height: 41%;
-    background-image: url(./public/assets/Img/Circuito2/cable2.png);
-    background-repeat: no-repeat;
-    background-size: 29%;
-    background-position: center center;
-    position: absolute;
-    top: 54px;
-    left: 39px;
-    transform: rotate( 
-153deg);
-    z-index: -12;
+  visibility: hidden;
+  width: 65%;
+  height: 41%;
+  background-image: url(./public/assets/Img/Circuito2/cable2.png);
+  background-repeat: no-repeat;
+  background-size: 29%;
+  background-position: center center;
+  position: absolute;
+  top: 54px;
+  left: 39px;
+  transform: rotate(153deg);
+  z-index: -12;
 }
 
 
@@ -237,8 +235,7 @@ ol {
   position: absolute;
   top: 19px;
   left: 30%;
-  transform: rotate( 
-165deg) scale(-1);
+  transform: rotate(165deg) scale(-1);
   z-index: -12;
 }
 
@@ -255,23 +252,22 @@ ol {
   top: 124px;
   right: 89px;
   z-index: -2;
-  transform: rotate( 
-338deg);
+  transform: rotate(338deg);
 }
 
 .interruptor {
   display: block;
-    visibility: hidden;
-    width: 45%;
-    height: 26%;
-    background-image: url(./public/assets/Img/Circuito2/iterruptor1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    position: absolute;
-    top: 13px;
-    left: 34px;
-    cursor: pointer;
+  visibility: hidden;
+  width: 45%;
+  height: 26%;
+  background-image: url(./public/assets/Img/Circuito2/iterruptor1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 13px;
+  left: 34px;
+  cursor: pointer;
 }
 
 .interruptor-on {
@@ -280,17 +276,17 @@ ol {
 
 .portalampara-1 {
   display: block;
-    visibility: hidden;
-    width: 121px;
-    height: 32%;
-    background-image: url(./public/assets/Img/Circuito2/portalampara.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    position: absolute;
-    top: 43px;
-    right: 37%;
-    z-index: -99;
+  visibility: hidden;
+  width: 121px;
+  height: 32%;
+  background-image: url(./public/assets/Img/Circuito2/portalampara.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 43px;
+  right: 37%;
+  z-index: -99;
 }
 
 .portalampara-1-on {
@@ -391,20 +387,20 @@ ol {
 
 .cable3-c3 {
   display: block;
-    visibility: hidden;
-    width: 466px;
-    height: 177px;
-    background-image: url(./public/assets/Img/Circuito3/cable3.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    position: relative;
-    top: 29%;
-    left: 43px;
-    transform: rotate(
-61deg) scale(-1,1);
-    z-index: 0;
-    pointer-events: none;
+  visibility: hidden;
+  width: 466px;
+  height: 177px;
+  background-image: url(./public/assets/Img/Circuito3/cable3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: relative;
+  top: 41%;
+  left: 65px;
+  transform: rotate(
+71deg) scale(-1, 1);
+  z-index: 0;
+  pointer-events: none;
 }
 
 
@@ -418,7 +414,7 @@ ol {
   background-size: contain;
   background-position: center center;
   position: absolute;
-  top: 73px;
+  top: 88px;
   left: 37px;
   transform: rotate(220deg);
   z-index: 4;
@@ -570,18 +566,18 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .area-collision {
   width: 100%;
-    pointer-events: all;
-    height: 47vh;
+  pointer-events: all;
+  height: 47vh;
 }
 
 .contenedor-elementos-area-colision {
-			width: 86%;
-			height: 44vh;
-			position: absolute;
-			top: -14px;
-			left: -1px;
-			margin: 0px auto;
-			pointer-events: none;
+  width: 86%;
+  height: 44vh;
+  position: absolute;
+  top: -14px;
+  left: -1px;
+  margin: 0px auto;
+  pointer-events: none;
 }
 
 .contenedor-pasos {
@@ -749,7 +745,7 @@ span {
 
   /* CSS */
   body {
- /*    border: 3px solid red */
+    /*    border: 3px solid red */
   }
 
 
@@ -1035,7 +1031,7 @@ span {
     width: 100%;
     pointer-events: all;
     height: 47vh;
-    
+
   }
 
   ol {
@@ -1053,7 +1049,7 @@ span {
     left: -1px;
     margin: 0px auto;
     pointer-events: none;
-}
+  }
 
   .aluminio {
     display: block;
@@ -1071,44 +1067,45 @@ span {
     pointer-events: none;
   }
 
-  
-.pila1 {
-  width: 89%;
-  height: 35px;
-  bottom: 117px;
-  left: 19px;
-}
+
+  .pila1 {
+    width: 89%;
+    height: 35px;
+    bottom: 117px;
+    left: 19px;
+  }
 
 
-.pila2 {
+  .pila2 {
     width: 89%;
     height: 31px;
     bottom: 119px;
     left: 10px;
-}
+  }
 
 
 
-.pilas-cinta-1 {
-  width: 89%;
-  height: 32px;
-  bottom: 123px;
-  left: 10px;
-}
+  .pilas-cinta-1 {
+    width: 89%;
+    height: 32px;
+    bottom: 123px;
+    left: 10px;
+  }
 
-.pilas-cinta-2 {
-  width: 89%;
-  height: 32px;
-  bottom: 101px;
-  left: 12px;;
-}
+  .pilas-cinta-2 {
+    width: 89%;
+    height: 32px;
+    bottom: 101px;
+    left: 12px;
+    ;
+  }
 
-.luz-led {
-  width: 58%;
-  height: 33%;
-  left: 55px;
-  top: 75px;
-}
+  .luz-led {
+    width: 58%;
+    height: 33%;
+    left: 55px;
+    top: 75px;
+  }
 
   .aluminio-2 {
     display: block;
@@ -1124,7 +1121,7 @@ span {
     top: 20%;
     z-index: -2;
     pointer-events: all;
-}
+  }
 
   /* Ciruito2 */
 
@@ -1148,8 +1145,7 @@ span {
     height: 35%;
     top: 67px;
     left: -69px;
-    transform: rotate(
-238deg);
+    transform: rotate(238deg);
     z-index: -12;
   }
 
@@ -1165,8 +1161,7 @@ span {
     height: 32%;
     top: 56px;
     left: -40px;
-    transform: rotate(
-153deg);
+    transform: rotate(153deg);
     z-index: -12;
     background-size: 39%;
   }
@@ -1184,8 +1179,7 @@ span {
     height: 29%;
     top: 45px;
     left: 33px;
-    transform: rotate( 
-165deg) scale(-1);
+    transform: rotate(165deg) scale(-1);
     z-index: -12;
     background-size: 33%
   }
@@ -1204,8 +1198,7 @@ span {
     /* bottom: -4px; */
     right: 63px;
     z-index: -2;
-    transform: rotate( 
-334deg);
+    transform: rotate(334deg);
     background-size: 98%;
     top: 92px;
   }
@@ -1223,8 +1216,7 @@ span {
     height: 30%;
     top: 91px;
     left: -43px;
-    transform: rotate(
-235deg);
+    transform: rotate(235deg);
     z-index: 4;
   }
 
@@ -1251,8 +1243,7 @@ span {
     height: 66%;
     top: 6px;
     left: 32px;
-    transform: rotate(
-205deg) scale(-1, 1);
+    transform: rotate(205deg) scale(-1, 1);
     z-index: -12;
   }
 
@@ -1261,8 +1252,7 @@ span {
     height: 35%;
     top: 132px;
     left: 0px;
-    transform: rotate(
-354deg);
+    transform: rotate(354deg);
     z-index: 0;
     background-size: contain;
   }
@@ -1282,8 +1272,7 @@ span {
     height: 49%;
     top: 91px;
     left: 139px;
-    transform: rotate(
-208deg) scale(-1, -1);
+    transform: rotate(208deg) scale(-1, -1);
   }
 
 }
