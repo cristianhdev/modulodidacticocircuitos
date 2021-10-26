@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laboratorio de tecnología</title>
+        <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+        <link rel="preload" href="styles.css" as="styles">
+        <link rel="preload" href="script.js" as="script">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
+</head>
+
+
+<body onload="init()">
+        <div style="position: absolute;top: 0px;z-index: 1;">
+                <img src="./public/assets/Img/logo.png" alt="logo: escuela nueva">
+        </div>
+        <div class="contendor-bienvenida">
+                <h1>LABORATORIO DE TECNOLOGIA</h1>
+                <div class="contenido-actividad-bienvenida">
+
+                        <div class="recuadro-explicacion-1 animate__animated animate__fadeIn" id="slide-1">
+                                <!-- <div class="titulo-interactiva">
+                <h1 class="animate__animated animate__fadeInLeft" style="text-shadow: 2px 3px 2px #a0a0ba;">
+                    Establezcamos relaciones de orden entre fracciones</h1>
+                <p>Bienvenidos, a continuación encontraremos un multimedia que nos ayudará a determinar la relación de
+                    orden existente entre dos números fraccionarios</p>
+            </div> -->
+                                <div class="contenedor-actividad">
+                                        <div class="contenedor-botones">
+                                                <div onclick="menu('linterna')" class="button">
+                                                        Linterna
+                                                </div>
+                                                <div onclick="menu('CircuitoSerie')" class="button">
+                                                        Circuito serie
+                                                </div>
+                                                <div onclick="menu('CircuitoMixto')" class="button">
+                                                        Detector de lluvia
+                                                </div>
+
+                                        </div>
+                                        <div class="contenedor-area-juego">
+                                                <h4 class="titulo-circuito"></h4>
+                                                <div class="contenedor-instrucciones">
+
+                                                        
+                                                </div>
+                                                <div class="contenedor-pasos">
+
+                                                </div>
+                                        </div>
+                                        <div class="contenedor-elementos">
+                                                <div>
+                                                        <h2>Centro de recursos</h2>
+                                                        <div>
+                                                                <div class="contenedor-elemento">
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/cinta.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/interruptor.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/pila-gorda.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/pilas.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/portapilas.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/Led.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/papel-aluminio.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/bomilla.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/pila.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/cable-caiman.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C1.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C2.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C3.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C4.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/bombilla-linterna.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C5.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C6.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C7.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C8.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C9.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C10.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C11.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C12.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C13.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C14.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento elemetos-interrogacion animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C15.png">
+                                                                        </div>
+                                                                        <div draggable="true" ondragstart="drag(event)">
+                                                                                <img class="imagen-elemento animate__animated animate__bounceIn animate__delay-1s"
+                                                                                        src="./public/assets/Img/ImagenesElemento/C16.png">
+                                                                        </div>
+
+                                                                </div>
+                                                        </div>
+
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                        <div class="recuadro-explicacion-2 animate__animated animate__fadeIn" id="slide-2">
+                                <div class="contendor-actividad">
+
+
+                                </div>
+                        </div>
+                        <!--  <div style="height: 38px;width: 100%;display: flex;justify-content: space-between;">
+            <div onclick="atras()" id="atras" class="button" />◀&nbsp;Atras
+        </div>
+        <div onclick="siguiente()" id="siguiente" class="button" />Siguiente&nbsp;▶
+    </div>
+    <div onclick="siguiente()" id="actividad" class="button" />Listo&nbsp;✍ -->
+                </div>
+        </div>
+        </div>
+        </div>
+
+
+        </div>
+        <!-- TODO -->
+        <!-- aun no configuro audios -->
+        <!-- <audio id="mireproductor" preload="none" src="./public/sounds/148.mp3"></audio> -->
+
+        <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

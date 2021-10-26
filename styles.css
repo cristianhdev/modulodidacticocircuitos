@@ -1,0 +1,1289 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+ol {
+  margin: 0px auto;
+  padding: 0px 21px;
+}
+
+/* ok */
+.titulo-interactiva {
+  font-size: 1.2em;
+  color: #009b7f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 67vh;
+  pointer-events: none;
+}
+
+
+.contendor-bienvenida {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #bbbdb8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23ece8f2' fill-opacity='0.4' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+  /*  background-image: url(./public/assets/Img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.luz-led-on {
+  background-image: url(./public/assets/Img/Circuito/Led-luz.png) !important;
+}
+
+.luz-led {
+  display: block;
+    visibility: hidden;
+    width: 86%;
+    height: 37%;
+    background-image: url(./public/assets/Img/Circuito/Led.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    text-align: center;
+    left: 11%;
+    top: 27%;
+    pointer-events: all;
+}
+
+.aluminio {
+  display: block;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: url(./public/assets/Img/Animaciones/aluminio.gif);
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center center;
+  position: absolute;
+  left: -18px;
+  top: 9px;
+  z-index: 2;
+  pointer-events: all;
+}
+
+.aluminio-2 {
+  display: block;
+    visibility: hidden;
+    width: 100%;
+    height: 84%;
+    background-image: url(./public/assets/Img/Animaciones/aluminio2.gif);
+    background-repeat: no-repeat;
+    background-size: 106%;
+    background-position: center center;
+    position: absolute;
+    left: -21px;
+    top: 30%;
+    z-index: -2;
+    pointer-events: all;
+}
+
+.pila1 {
+  display: block;
+  visibility: hidden;
+  width: 89%;
+  height: 59px;
+  background-image: url(./public/assets/Img/Circuito/pilas-cinta-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: 56px;
+  left: 7px;
+}
+
+
+.pila2 {
+  display: block;
+  visibility: hidden;
+  width: 89%;
+  height: 59px;
+  background-image: url(./public/assets/Img/Circuito/pilas-cinta-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: 56px;
+  left: 7px;
+}
+
+
+
+.pilas-cinta-1 {
+  display: block;
+  visibility: visible;
+  width: 89%;
+  height: 59px;
+  background-image: url(./public/assets/Img/Circuito/pilas-cinta-1a.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: 56px;
+  left: 7px;
+}
+
+.pilas-cinta-2 {
+  display: block;
+  visibility: visible;
+  width: 89%;
+  height: 59px;
+  background-image: url(./public/assets/Img/Circuito/pilas-cinta-1b.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  /* bottom: 0px; */
+  left: 7px;
+}
+
+/* fin Circuito 1*/
+
+/* Ciruito2 */
+
+.pilas-c2 {
+  display: block;
+    visibility: hidden;
+    width: 33%;
+    height: 37%;
+    background-image: url(./public/assets/Img/Circuito2/PilasJuntas-c2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    bottom: -7px;
+    left: 17px;
+}
+
+.portapilas {
+  display: block;
+  visibility: hidden;
+  width: 35%;
+  height: 44%;
+  background-image: url(./public/assets/Img/Circuito2/portapilas.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: -23px;
+  left: 9px;
+}
+
+.cable1 {
+  display: block;
+    visibility: hidden;
+    width: 33%;
+    height: 57%;
+    background-image: url(./public/assets/Img/Circuito2/cable2.png);
+    background-repeat: no-repeat;
+    background-size: 73%;
+    background-position: center center;
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    transform: rotate( 
+233deg);
+    z-index: -12;
+}
+
+.cable2 {
+  display: block;
+    visibility: hidden;
+    width: 65%;
+    height: 41%;
+    background-image: url(./public/assets/Img/Circuito2/cable2.png);
+    background-repeat: no-repeat;
+    background-size: 29%;
+    background-position: center center;
+    position: absolute;
+    top: 54px;
+    left: 39px;
+    transform: rotate( 
+153deg);
+    z-index: -12;
+}
+
+
+.cable3 {
+  display: block;
+  visibility: hidden;
+  width: 67%;
+  height: 45%;
+  background-image: url(./public/assets/Img/Circuito2/cable2.png);
+  background-repeat: no-repeat;
+  background-size: 28%;
+  background-position: center center;
+  position: absolute;
+  top: 19px;
+  left: 30%;
+  transform: rotate( 
+165deg) scale(-1);
+  z-index: -12;
+}
+
+.cable4 {
+  display: block;
+  visibility: hidden;
+  width: 59%;
+  height: 39%;
+  background-image: url(./public/assets/Img/Circuito2/cable3.png);
+  background-repeat: no-repeat;
+  background-size: 88%;
+  background-position: center center;
+  position: absolute;
+  top: 124px;
+  right: 89px;
+  z-index: -2;
+  transform: rotate( 
+338deg);
+}
+
+.interruptor {
+  display: block;
+    visibility: hidden;
+    width: 45%;
+    height: 26%;
+    background-image: url(./public/assets/Img/Circuito2/iterruptor1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    top: 13px;
+    left: 34px;
+    cursor: pointer;
+}
+
+.interruptor-on {
+  background-image: url(./public/assets/Img/Circuito2/interruptor2.png) !important;
+}
+
+.portalampara-1 {
+  display: block;
+    visibility: hidden;
+    width: 121px;
+    height: 32%;
+    background-image: url(./public/assets/Img/Circuito2/portalampara.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    top: 43px;
+    right: 37%;
+    z-index: -99;
+}
+
+.portalampara-1-on {
+
+  background-image: url(./public/assets/Img/Circuito2/portalampara-encendida.png) !important;
+
+}
+
+.portalampara-2 {
+  display: block;
+  visibility: hidden;
+  width: 121px;
+  height: 32%;
+  background-image: url(./public/assets/Img/Circuito2/portalampara.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 77px;
+  right: 17%;
+  z-index: -25;
+}
+
+.portalampara-2-on {
+  background-image: url(./public/assets/Img/Circuito2/portalampara-encendida.png) !important;
+}
+
+/* fin cicuito 2*/
+
+/* Ciruito3 */
+.caja_plastica {
+  display: block;
+  visibility: hidden;
+  width: 39%;
+  height: 39%;
+  background-image: url(./public/assets/Img/Animaciones/agua.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: 3px;
+  right: 40px;
+  z-index: 0;
+}
+
+.pila-cuadrada {
+  display: block;
+  visibility: hidden;
+  width: 15%;
+  height: 33%;
+  background-image: url(./public/assets/Img/Circuito3/pila-cuadrada.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  bottom: 19px;
+  right: 319px;
+}
+
+
+.interruptor-c3 {
+  display: block;
+  visibility: hidden;
+  width: 45%;
+  height: 26%;
+  background-image: url(./public/assets/Img/Circuito3/iterruptor1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 13px;
+  left: 34px;
+  cursor: pointer;
+}
+
+.interruptor-c3-on {
+  background-image: url(./public/assets/Img/Circuito3/interruptor2.png) !important;
+}
+
+.portalampara-2-c3 {
+  display: block;
+  visibility: hidden;
+  width: 26%;
+  height: 30%;
+  background-image: url(./public/assets/Img/Circuito3/portalampara.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 73px;
+  right: 50px;
+  z-index: -25;
+}
+
+.portalampara-2-c3-on {
+  background-image: url(./public/assets/Img/Circuito3/portalampara-encendida.png) !important;
+}
+
+.cable3-c3 {
+  display: block;
+    visibility: hidden;
+    width: 466px;
+    height: 177px;
+    background-image: url(./public/assets/Img/Circuito3/cable3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position: relative;
+    top: 29%;
+    left: 43px;
+    transform: rotate(
+61deg) scale(-1,1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.cable1-c3 {
+  display: block;
+  visibility: hidden;
+  width: 33%;
+  height: 43%;
+  background-image: url(./public/assets/Img/Circuito2/cable2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 73px;
+  left: 37px;
+  transform: rotate(220deg);
+  z-index: 4;
+}
+
+.cable2-c3 {
+  display: block;
+  visibility: hidden;
+  width: 50%;
+  height: 36%;
+  background-image: url(./public/assets/Img/Circuito3/cable3a.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 15%;
+  left: 27%;
+  transform: rotate(194deg) scale(-1, 1);
+  z-index: -12;
+}
+
+.cable4-c3 {
+  display: block;
+  visibility: hidden;
+  width: 43%;
+  height: 49%;
+  background-image: url(./public/assets/Img/Circuito3/cable4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 96px;
+  left: 62%;
+  transform: rotate(203deg) scale(-1, -1);
+}
+
+
+/* Fin circuito 3 */
+
+/* Imagenes */
+.responsive {
+  width: 70%;
+  height: auto;
+}
+
+.recuadro-explicacion-1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.contenido-actividad-bienvenida {
+  border: 13px #2f92d8 double;
+  border-radius: 28px 28px;
+  width: 84%;
+  height: 84%;
+  background-color: white;
+  margin: 0px auto;
+  padding: 12px;
+  /* background-color: #bbbdb8;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23ece8f2' fill-opacity='0.4' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E"); */
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%238bd039' fill-opacity='0.4' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+  opacity: 0.9;
+  overflow: hidden;
+  background-blend-mode: hard-light;
+}
+
+
+
+
+/* css actividad nueva*/
+
+.contenedor-actividad {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  height: 70vh;
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+  height: 41vh;
+}
+
+.contenedor-area-juego {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  height: 86vh;
+}
+
+.contenedor-elemento {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4px 5px;
+  height: 80vh;
+}
+
+.contenedor-elemento div {
+  background-color: white;
+  border-radius: 3px 3px;
+  margin: 1px 3px;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid silver;
+  filter: drop-shadow(1px 4px 3px black);
+  pointer-events: none;
+  background-image: url(./public/assets/Img/interrogacion.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer
+}
+
+.elementos-interrogacion {
+  background-image: url(./public/assets/Img/interrogacion.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.imagen-elemento {
+  width: 10vh;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+
+.contenedor-instrucciones {
+  height: 49vh;
+  /* padding: 43px 54px; */
+  border: 1px solid #009b7f;
+  border-radius: 12px;
+  width: 97%;
+  filter: drop-shadow(2px 2px 3px black);
+  background-color: white;
+  padding: 12px 0px;
+  overflow: hidden;
+}
+
+.area-collision {
+  width: 100%;
+    pointer-events: all;
+    height: 47vh;
+}
+
+.contenedor-elementos-area-colision {
+			width: 86%;
+			height: 44vh;
+			position: absolute;
+			top: -14px;
+			left: -1px;
+			margin: 0px auto;
+			pointer-events: none;
+}
+
+.contenedor-pasos {
+  height: 106px;
+  border: 1px solid #009b7f;
+  padding: 20px;
+  border-radius: 12px;
+  width: 91%;
+  filter: drop-shadow(2px 2px 3px black);
+  background-color: white;
+}
+
+
+h4 {
+  margin: 5px 0px
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.2em;
+  font-family: 'Calibri', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #12584c;
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
+}
+
+
+p,
+span {
+  font-size: 1.2em;
+  font-family: 'Calibri', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+
+.button {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 0px;
+  border: solid 1px #004F72;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E5FFFF;
+  background: #009b7f;
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  margin: 23px auto;
+  cursor: pointer
+}
+
+.button:hover {
+  width: 100%;
+  margin: 0px auto;
+  padding: 6px 0px;
+  border: solid 1px #004F72;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E5FFFF;
+  background-color: #009b7f;
+  background-image: -moz-linear-gradient(top, #009b7f 0%, #3b9c8a 100%);
+  background-image: -webkit-linear-gradient(top, #009b7f 0%, #3b9c8a 100%);
+  background-image: -o-linear-gradient(top, #009b7f 0%, #3b9c8a 100%);
+  background-image: -ms-linear-gradient(top, #009b7f 0%, #3b9c8a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b9c8a', endColorstr='#3b9c8a', GradientType=0);
+  background-image: linear-gradient(top, #009b7f 0%, #3b9c8a 100%);
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  margin: 23px auto;
+}
+
+
+
+
+
+/* .button {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 0px;
+  border: solid 1px #457539;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E5FFFF;
+  background-color: #86c277;
+  background-image: -moz-linear-gradient(top, #86c277 0%, #457539 100%);
+  background-image: -webkit-linear-gradient(top, #86c277 0%, #457539 100%);
+  background-image: -o-linear-gradient(top, #86c277 0%, #457539 100%);
+  background-image: -ms-linear-gradient(top, #86c277 0%, #457539 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#457539', endColorstr='#457539', GradientType=0);
+  background-image: linear-gradient(top, #86c277 0%, #457539 100%);
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  margin: 23px auto;
+  cursor: pointer
+}
+
+.button:hover {
+  width: 100%;
+  margin: 0px auto;
+  padding: 6px 0px;
+  border: solid 1px #457539;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E5FFFF;
+  background-color: #86c277;
+  background-image: -moz-linear-gradient(top, #86c277 0%, #457539 100%);
+  background-image: -webkit-linear-gradient(top, #86c277 0%, #457539 100%);
+  background-image: -o-linear-gradient(top, #86c277 0%, #457539 100%);
+  background-image: -ms-linear-gradient(top, #86c277 0%, #457539 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#457539', endColorstr='#457539', GradientType=0);
+  background-image: linear-gradient(top, #86c277 0%, #457539 100%);
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  margin: 23px auto;
+} */
+
+
+
+
+
+.button_atras {
+  visibility: hidden;
+}
+
+.button_actividad {
+  display: none;
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+  /* CSS */
+  body {
+ /*    border: 3px solid red */
+  }
+
+
+
+
+
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  /* CSS */
+  body {
+    border: 12px solid red
+  }
+
+
+
+
+
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media only screen and (max-width: 992px) {}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  /* CSS */
+  body {
+    /* border: 12px solid red */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 24px;
+  }
+
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 18px;
+
+  }
+
+  p,
+  span {
+    font-size: 0.8em
+  }
+
+  .titulo-interactiva {
+    font-size: 1em;
+    height: 67vh;
+  }
+
+  .contenido-actividad-bienvenida {
+    height: 118vh;
+
+  }
+
+  .contenedor-actividad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    height: 80vh;
+    margin-top: 13px;
+
+  }
+
+  .contenedor-botones {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 16vh;
+    font-size: 15px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 2px 0px;
+  }
+
+  .button {
+    font-size: 0.7em;
+    margin: 6px auto;
+  }
+
+  .button:hover {
+    font-size: 1em;
+    margin: 6px auto;
+  }
+
+  .contenedor-instrucciones {
+    height: 26vh;
+    padding: 0px 23px;
+    width: 90%;
+    margin-bottom: 9px;
+
+  }
+
+  .contenedor-elemento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    overflow: scroll;
+    height: 213px;
+    width: inherit;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+
+
+
+  .contenedor-elemento div {
+    height: 66px;
+  }
+
+
+  .contenedor-pasos {
+    height: 13vh;
+    width: 91%;
+    padding: 36px 20px;
+  }
+
+  .contenedor-elementos {
+    margin-top: 73px;
+    width: 100%;
+  }
+
+  ol {
+    margin: 0px auto;
+    padding: 0px 0px;
+  }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    overflow-y: scroll;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 18px;
+
+  }
+
+  p,
+  span {
+    font-size: 0.8em
+  }
+
+  .titulo-interactiva {
+    font-size: 1em;
+    height: 67vh;
+  }
+
+  .contendor-bienvenida {
+    height: 158vh
+  }
+
+  .contenido-actividad-bienvenida {
+    height: 130vh;
+  }
+
+  .contenedor-actividad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    height: 106vh;
+    margin-top: 13px;
+  }
+
+  .contenedor-botones {
+    display: flex;
+    flex-direction: row;
+    width: 106%;
+    height: 16vh;
+    font-size: 15px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 2px 0px;
+  }
+
+  .button {
+    font-size: 0.7em;
+    margin: 6px auto;
+  }
+
+  .button:hover {
+    font-size: 0.7em;
+    margin: 6px auto;
+  }
+
+  .contenedor-instrucciones {
+    height: 99vh;
+    padding: 0px 23px;
+    width: initial;
+    margin-bottom: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .contenedor-elemento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    overflow: scroll;
+    height: 213px;
+    width: initial;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+
+
+
+  .contenedor-elemento div {
+    height: 66px;
+  }
+
+
+  .contenedor-pasos {
+    height: 20vh;
+    width: initial;
+    padding: 36px 20px;
+  }
+
+  .contenedor-elementos {
+    margin-top: 73px;
+    width: 100%;
+  }
+
+  .area-collision {
+    width: 100%;
+    pointer-events: all;
+    height: 47vh;
+    
+  }
+
+  ol {
+    margin: 0px auto;
+    padding: 0px 0px;
+  }
+
+  /*Elementos */
+
+  .contenedor-elementos-area-colision {
+    width: 100%;
+    height: 44vh;
+    position: absolute;
+    top: -14px;
+    left: -1px;
+    margin: 0px auto;
+    pointer-events: none;
+}
+
+  .aluminio {
+    display: block;
+    visibility: hidden;
+    width: 107%;
+    height: 75%;
+    background-image: url(./public/assets/Img/Animaciones/aluminio.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    left: -32px;
+    top: 57px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  
+.pila1 {
+  width: 89%;
+  height: 35px;
+  bottom: 117px;
+  left: 19px;
+}
+
+
+.pila2 {
+    width: 89%;
+    height: 31px;
+    bottom: 119px;
+    left: 10px;
+}
+
+
+
+.pilas-cinta-1 {
+  width: 89%;
+  height: 32px;
+  bottom: 123px;
+  left: 10px;
+}
+
+.pilas-cinta-2 {
+  width: 89%;
+  height: 32px;
+  bottom: 101px;
+  left: 12px;;
+}
+
+.luz-led {
+  width: 58%;
+  height: 33%;
+  left: 55px;
+  top: 75px;
+}
+
+  .aluminio-2 {
+    display: block;
+    visibility: hidden;
+    width: 111%;
+    height: 84%;
+    background-image: url(./public/assets/Img/Animaciones/aluminio2.gif);
+    background-repeat: no-repeat;
+    background-size: 106%;
+    background-position: center center;
+    position: absolute;
+    left: -38px;
+    top: 20%;
+    z-index: -2;
+    pointer-events: all;
+}
+
+  /* Ciruito2 */
+
+  .pilas-c2 {
+    width: 33%;
+    height: 37%;
+    bottom: 56px;
+    left: -65px;
+  }
+
+  .portapilas {
+
+    width: 79%;
+    height: 28%;
+    bottom: 62px;
+    left: -128px;
+  }
+
+  .cable1 {
+    width: 40%;
+    height: 35%;
+    top: 67px;
+    left: -69px;
+    transform: rotate(
+238deg);
+    z-index: -12;
+  }
+
+  .interruptor {
+    width: 45%;
+    height: 26%;
+    top: 13px;
+    left: -43px;
+  }
+
+  .cable2 {
+    width: 61%;
+    height: 32%;
+    top: 56px;
+    left: -40px;
+    transform: rotate(
+153deg);
+    z-index: -12;
+    background-size: 39%;
+  }
+
+  .portalampara-1 {
+    width: 39%;
+    height: 32%;
+    top: 40px;
+    right: 120px;
+    z-index: -99;
+  }
+
+  .cable3 {
+    width: 62%;
+    height: 29%;
+    top: 45px;
+    left: 33px;
+    transform: rotate( 
+165deg) scale(-1);
+    z-index: -12;
+    background-size: 33%
+  }
+
+  .portalampara-2 {
+    width: 38%;
+    height: 32%;
+    top: 55px;
+    right: 53px;
+    z-index: -25;
+  }
+
+  .cable4 {
+    width: 75%;
+    height: 32%;
+    /* bottom: -4px; */
+    right: 63px;
+    z-index: -2;
+    transform: rotate( 
+334deg);
+    background-size: 98%;
+    top: 92px;
+  }
+
+
+  .pila-cuadrada {
+    width: 19%;
+    height: 33%;
+    bottom: 33px;
+    right: 184px;
+  }
+
+  .cable1-c3 {
+    width: 38%;
+    height: 30%;
+    top: 91px;
+    left: -43px;
+    transform: rotate(
+235deg);
+    z-index: 4;
+  }
+
+  .caja_plastica {
+
+    width: 57%;
+    height: 39%;
+    bottom: 3px;
+    right: 36px;
+    z-index: 0;
+  }
+
+  .interruptor-c3 {
+
+    width: 45%;
+    height: 26%;
+
+    top: 28px;
+    left: -16px;
+  }
+
+  .cable2-c3 {
+    width: 56%;
+    height: 66%;
+    top: 6px;
+    left: 32px;
+    transform: rotate(
+205deg) scale(-1, 1);
+    z-index: -12;
+  }
+
+  .cable3-c3 {
+    width: 67%;
+    height: 35%;
+    top: 132px;
+    left: 0px;
+    transform: rotate(
+354deg);
+    z-index: 0;
+    background-size: contain;
+  }
+
+  .portalampara-2-c3 {
+
+    width: 41%;
+    height: 30%;
+
+    top: 70px;
+    right: 22px;
+    z-index: -25;
+  }
+
+  .cable4-c3 {
+    width: 37%;
+    height: 49%;
+    top: 91px;
+    left: 139px;
+    transform: rotate(
+208deg) scale(-1, -1);
+  }
+
+}
