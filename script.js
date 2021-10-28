@@ -261,6 +261,7 @@ let elementosPermitidosActividad2 = [
 /** Configuracion actividad 3 */
 let tituloCircuito3 = '¡Circuito mixtos!'
 let contadorCableC3 = 0
+let elementosImagenSvgC3;
 let instruccionesActividade3 = [
 	`<div class="animate__animated animate__fadeIn">
 	<h4>!Vamos a construir el circuito mostrado en el punto 11!</h4>
@@ -310,45 +311,7 @@ let pasosActividad3 = [
 				`
 ]
 
-let areaCollision3 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
-<div>
-			<div style="
-			width: 86%;
-			height: 44vh;
-			position: absolute;
-			top: 13px;
-			left: 38px;
-			margin: 0px auto;
-		">
-					<div class="pila-cuadrada">
-
-					</div>
-					<div class="cable1-c3">
-
-					</div>
-					<div class="caja_plastica">
-
-					</div>
-					<div class="interruptor-c3">
-
-					</div>
-					<div class="cable2-c3">
-
-					</div>
-					<div class="cable3-c3">
-
-					</div>
-					<div class="portalampara-2-c3">
-
-					</div>
-					<div class="cable4-c3">
-							
-					</div>
-				</div>
-			<div>
-		</div>
-	</div>
-</div>`
+let areaCollision3 = ``
 
 
 
@@ -485,10 +448,6 @@ function getCurrentSlider() {
 }
 
 
-
-
-
-
 function allowDrop(ev) {
 	ev.preventDefault();
 }
@@ -572,6 +531,7 @@ function menu(opcion) {
 			break;
 		case 'CircuitoMixto':
 			ReiniciarElementos()
+			ReiniciarCircuito3()
 			document.querySelector('.titulo-circuito').innerHTML = tituloCircuito3
 			pasosCorrectosActividad = 0
 			elementosPermitidosActividadActual = elementosPermitidosActividad3
@@ -640,11 +600,10 @@ function iniciar(actividad) {
 			document.querySelector('.contenedor-instrucciones').innerHTML = ''
 			document.querySelector('.contenedor-instrucciones').innerHTML = areaCollision2
 			elementosImagenSvgC2 = document.querySelectorAll('g')
-			console.log(elementosImagenSvgC2)
 			elementosImagenSvgC2.forEach(element => {
 				element.style.visibility = 'hidden'
 			});
-
+			
 			mostrarPasosActividad2()
 			AlatoriosImagen()
 			break;
@@ -653,6 +612,11 @@ function iniciar(actividad) {
 			document.querySelector('#comenzar').style.display = 'none'
 			document.querySelector('.contenedor-instrucciones').innerHTML = ''
 			document.querySelector('.contenedor-instrucciones').innerHTML = areaCollision3
+			elementosImagenSvgC3 = document.querySelectorAll('g')
+			elementosImagenSvgC3.forEach(element => {
+				element.style.visibility = 'hidden'
+			});
+			console.log(elementosImagenSvgC3)
 			mostrarPasosActividad3()
 			AlatoriosImagen()
 			break;
@@ -729,12 +693,13 @@ function verificarPasosC2() {
 		case 8:
 			let interruptorc2 = document.querySelector(`#${elementosImagenSvgC2[8].id}`)
 			let interruptorc2Img = document.querySelector(`#${elementosImagenSvgC2[8].id} > image`)
-			let portalampara1c1 = document.querySelector(`#${elementosImagenSvgC2[2].id}`)
+			
 			let portalampara1c1Img = document.querySelector(`#${elementosImagenSvgC2[2].id} > image`)
-			let portalampara2c1 = document.querySelector(`#${elementosImagenSvgC2[3].id}`)
+			
 			let portalampara2c1Img = document.querySelector(`#${elementosImagenSvgC2[3].id} > image`)
 			let InterruptorClick=false
 
+			interruptorc2.style.cursor='pointer'
 
 			interruptorc2.addEventListener('click', (e) => {
 				if(InterruptorClick==false){
@@ -791,20 +756,32 @@ function verificarPasosC3() {
 		case 8:
 			pasosActividad3.shift()
 			mostrarPasosActividad3()
-			let interruptor = document.querySelector('.interruptor-c3')
-			let portalampara1c3 = document.querySelector('.portalampara-2-c3')
+			let interruptorc3 = document.querySelector(`#${elementosImagenSvgC3[1].id}`)
+			let interruptorc3Img = document.querySelector(`#${elementosImagenSvgC3[1].id} > image`)
+			let portalampara1c3Img = document.querySelector(`#${elementosImagenSvgC3[2].id} > image`)
+			let InterruptorClick=false
 
-			interruptor.addEventListener('click', (e) => {
-				interruptor.classList.toggle('interruptor-c3-on')
-				portalampara1c3.classList.toggle('portalampara-2-c3-on')
+			interruptorc3.style.cursor='pointer'
+
+			interruptorc3.addEventListener('click', (e) => {
+				if(InterruptorClick==false){
+					interruptorc3Img.setAttribute('xlink:href','./public/assets/Img/Circuito3/interruptor2.png')
+					portalampara1c3Img.setAttribute('xlink:href','./public/assets/Img/Circuito3/portalampara-encendida.png')
+					InterruptorClick=!InterruptorClick
+				}else{
+					interruptorc3Img.setAttribute('xlink:href','./public/assets/Img/Circuito3/iterruptor1.png')
+					portalampara1c3Img.setAttribute('xlink:href','./public/assets/Img/Circuito3/portalampara.png')
+					InterruptorClick=!InterruptorClick
+				}
+				
 			}, false)
 
 
-			tippy(`.interruptor-c3`, {
+			tippy(`#${elementosImagenSvgC3[1].id}`, {
 				content: 'Clic aqui',
 				theme: 'material',
 
-			});
+			}); 
 			break;
 		default:
 			break;
@@ -897,34 +874,37 @@ function MostrarPartesCircuito2(figura_dragId) {
 
 function MostrarPartesCircuito3(figura_dragId) {
 	if (figura_dragId == 'elemento-2') {
-		document.querySelector('.pila-cuadrada').style.visibility = 'visible'
+		
+		elementosImagenSvgC3[0].style.visibility = 'visible'
 	}
 	if (figura_dragId == 'elemento-1') {
-		document.querySelector('.interruptor-c3').style.visibility = 'visible'
+		elementosImagenSvgC3[1].style.visibility = 'visible'
 	}
-	if (figura_dragId == 'elemento-7') {
-		document.querySelector('.portalampara-2-c3').style.visibility = 'visible'
-
-	}
-	if (figura_dragId == 'elemento-22') {
-		document.querySelector('.caja_plastica').style.visibility = 'visible'
-	}
+	
 	if (figura_dragId == 'elemento-9' && contadorCableC3 == 0) {
-		document.querySelector('.cable1-c3').style.visibility = 'visible'
 		contadorCableC3++
-		/* document.querySelector('.cable2-c3').style.visibility = 'visible'
-		document.querySelector('.cable3-c3').style.visibility = 'visible'
-		document.querySelector('.cable4-c3').style.visibility = 'visible' */
+		elementosImagenSvgC3[4].style.visibility = 'visible'
 	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 1) {
-		document.querySelector('.cable2-c3').style.visibility = 'visible'
 		contadorCableC3++
+		elementosImagenSvgC3[5].style.visibility = 'visible'
 	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 2) {
-		document.querySelector('.cable4-c3').style.visibility = 'visible'
+		
 		contadorCableC3++
+		elementosImagenSvgC3[6].style.visibility = 'visible'
 	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 3) {
-		document.querySelector('.cable3-c3').style.visibility = 'visible'
+		
 		contadorCableC3++
+		elementosImagenSvgC3[7].style.visibility = 'visible'
 	}
+
+	if (figura_dragId == 'elemento-7') {
+		elementosImagenSvgC3[2].style.visibility = 'visible'
+	}
+
+	if (figura_dragId == 'elemento-22') {
+		elementosImagenSvgC3[3].style.visibility = 'visible'
+	}
+	
 }
 
 function AlatoriosImagen() {
@@ -1205,7 +1185,7 @@ function ReiniciarCircuito2() {
 		`<div>
 				<h4>Pasos</h4>
 				 <ol start="4">
-											<li><span>Conectamos un cable del otro terminal del segundo portalámparas al otro terminal del portalámparas</span></li>
+											<li><span>Conectamos un cable del otro terminal del segundo portalámparas al otro terminal del portapilas</span></li>
 										</ol>
 					</div>`,
 		`
@@ -1217,95 +1197,90 @@ function ReiniciarCircuito2() {
 				`
 	]
 
-	areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
-<div>
+	areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<div>
 			<div class="contenedor-svg">
-		<div >
-		<svg version="1.1" class="responsive-c2"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
-<g id="CapaInicial">
-</g>
-<g id="Cable1">
-	
-		<image style="overflow:visible;outline: none;" width="120" height="137" xlink:href="./public/assets/Img/Circuito2/37.png"  transform="matrix(-0.1167 -1.2219 1.2219 -0.1167 181.2849 331.5068)">
-	</image>
-</g>
-<g id="Portalampara2">
-	
-		<image style="overflow:visible;outline: none;" width="246" height="171" xlink:href="./public/assets/Img/Circuito2/portalampara.png"  transform="matrix(0.7154 0 0 0.6608 503 177)">
-	</image>
-</g>
-<g id="Portalampara1">
-	
-		<image style="overflow:visible;outline: none;" width="246" height="171" xlink:href="./public/assets/Img/Circuito2/portalampara.png"  transform="matrix(0.6891 0 0 0.6891 403 126)">
-	</image>
-</g>
-<g id="Cable2">
-	
-		<image style="overflow:visible;outline: none;" width="85" height="236" xlink:href="./public/assets/Img/Circuito2/cable4.png"  transform="matrix(0.4477 0.8942 0.5948 -0.2978 303.0479 215.162)">
-	</image>
-</g>
-<g id="Cable3">
-	
-		<image style="overflow:visible;outline: none;" width="360" height="135" xlink:href="./public/assets/Img/Circuito2/cable3.png"  transform="matrix(0.817 -0.3937 0.4341 0.9009 313.4775 316.2836)">
-	</image>
-</g>
-<g id="Portapila">
-	
-		<image style="overflow:visible;outline: none;" width="134" height="114" xlink:href="./public/assets/Img/Circuito2/portapilas.png"  transform="matrix(1.4403 0 0 1.4403 153 309)">
-	</image>
-</g>
-<g id="Pilas">
-	
-		<image style="overflow:visible;outline: none;" width="144" height="112" xlink:href="./public/assets/Img/Circuito2/PilasJuntas-c2.png"  transform="matrix(1.3298 0 0 1.3298 158.794 312.8565)">
-	</image>
-</g>
-<g id="Interruptor1" style="outline: none;">
-	
-		<image style="overflow:visible;outline: none;" width="38" height="66" xlink:href="./public/assets/Img/Circuito2/iterruptor1.png"  transform="matrix(1.6787 0 0 1.6787 314.6841 97)">
-	</image>
-</g>
-<g id="Cable4" >
-	<image style="overflow:visible;outline: none;" width="107" height="120" xlink:href="./public/assets/Img/Circuito2/cable2.png"  transform="matrix(0.785 0 0 0.7 509 161)">
-	</image>
-</g>
-</svg>
+					<div>
+							<svg version="1.1" class="responsive-c2" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;"
+									xml:space="preserve">
+									<g id="CapaInicial">
+									</g>
+									<g id="Cable1">
 
+											<image style="overflow:visible;outline: none;pointer-events: none;" width="120"
+													height="137"
+													xlink:href="./public/assets/Img/Circuito2/37.png"
+													transform="matrix(-0.1167 -1.2219 1.2219 -0.1167 181.2849 331.5068)">
+											</image>
+									</g>
+									<g id="Portalampara2">
 
-		
-		</div>
-		
-					<!--<div class="portapilas">
+											<image style="overflow:visible;outline: none;" width="246"
+													height="171"
+													xlink:href="./public/assets/Img/Circuito2/portalampara.png"
+													transform="matrix(0.7154 0 0 0.6608 503 177)">
+											</image>
+									</g>
+									<g id="Portalampara1">
 
+											<image style="overflow:visible;outline: none;" width="246"
+													height="171"
+													xlink:href="./public/assets/Img/Circuito2/portalampara.png"
+													transform="matrix(0.6891 0 0 0.6891 403 126)">
+											</image>
+									</g>
+									<g id="Cable2">
+
+											<image style="overflow:visible;outline: none;pointer-events: none;" width="85"
+													height="236"
+													xlink:href="./public/assets/Img/Circuito2/cable4.png"
+													transform="matrix(0.4477 0.8942 0.5948 -0.2978 303.0479 215.162)">
+											</image>
+									</g>
+									<g id="Cable3">
+
+											<image style="overflow:visible;outline: none;pointer-events: none;" width="360"
+													height="135"
+													xlink:href="./public/assets/Img/Circuito2/cable3.png"
+													transform="matrix(0.817 -0.3937 0.4341 0.9009 313.4775 316.2836)">
+											</image>
+									</g>
+									<g id="Portapila">
+
+											<image style="overflow:visible;outline: none;" width="134"
+													height="114"
+													xlink:href="./public/assets/Img/Circuito2/portapilas.png"
+													transform="matrix(1.4403 0 0 1.4403 153 309)">
+											</image>
+									</g>
+									<g id="Pilas">
+
+											<image style="overflow:visible;outline: none;" width="144"
+													height="112"
+													xlink:href="./public/assets/Img/Circuito2/PilasJuntas-c2.png"
+													transform="matrix(1.3298 0 0 1.3298 158.794 312.8565)">
+											</image>
+									</g>
+									<g id="Interruptor1" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;" width="38"
+													height="66"
+													xlink:href="./public/assets/Img/Circuito2/iterruptor1.png"
+													transform="matrix(1.6787 0 0 1.6787 314.6841 97)">
+											</image>
+									</g>
+									<g id="Cable4">
+											<image style="overflow:visible;outline: none;pointer-events: none;" width="107"
+													height="120"
+													xlink:href="./public/assets/Img/Circuito2/cable2.png"
+													transform="matrix(0.785 0 0 0.7 509 161)">
+											</image>
+									</g>
+							</svg>
 					</div>
-					<div class="pilas-c2">
-
-					</div>
-					<div class="cable1">
-
-					</div>
-					<div class="interruptor">
-
-					</div>
-					<div class="cable2">
-
-					</div>
-					<div class="portalampara-1">
-
-					</div>
-					<div class="cable3">
-
-					</div>
-					<div class="portalampara-2">
-
-					</div>
-					<div class="cable4">
-		</div> -->
 			</div>
-			<div>
-
-			</div>
-
 	</div>
 </div>`
 
@@ -1377,45 +1352,83 @@ function ReiniciarCircuito3() {
 					`
 	]
 
-	areaCollision3 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
+	areaCollision3 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)">
 	<div>
-				<div style="
-				width: 86%;
-				height: 44vh;
-				position: absolute;
-				top: 13px;
-				left: 38px;
-				margin: 0px auto;
-			">
-						<div class="pila-cuadrada">
-	
-						</div>
-						<div class="cable1-c3">
-	
-						</div>
-						<div class="caja_plastica">
-	
-						</div>
-						<div class="interruptor-c3">
-	
-						</div>
-						<div class="cable2-c3">
-	
-						</div>
-						<div class="cable3-c3">
-	
-						</div>
-						<div class="portalampara-2-c3">
-	
-						</div>
-						<div class="cable4-c3">
-								
-						</div>
+			<div class="contenedor-svg">
+					<div>
+							<svg version="1.1" class="responsive-c2" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;"
+									xml:space="preserve">
+									<g id="PilaGorde" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;" width="54"
+													height="94"
+													xlink:href="./public/assets/Img/Circuito3/pila-cuadrada.png"
+													transform="matrix(1.3176 0 0 1.3176 298.8837 317.8929)">
+											</image>
+									</g>
+									<g id="Interruptor" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;" width="38"
+													height="66"
+													xlink:href="./public/assets/Img/Circuito3/iterruptor1.png"
+													transform="matrix(1.6742 0 0 1.6742 290.8571 113.3609)">
+											</image>
+									</g>
+									<g id="Lampara1" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;" width="246"
+													height="171"
+													xlink:href="./public/assets/Img/Circuito3/portalampara.png"
+													transform="matrix(0.6692 0 0 0.6692 440.5476 147.9643)">
+											</image>
+									</g>
+									<g id="CajonAgua" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;" width="500"
+													height="300"
+													xlink:href="./public/assets/Img/Animaciones/agua.gif"
+													transform="matrix(0.4792 0 0 0.4792 391.1429 308.4286)">
+											</image>
+									</g>
+									<g id="Cable1" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;pointer-events: none;"
+													width="120" height="137"
+													xlink:href="./public/assets/Img/Circuito3/37.png"
+													transform="matrix(-0.3269 -1.1712 1.1312 -0.3157 187.5065 365.6403)">
+											</image>
+									</g>
+									<g id="Cable2" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;pointer-events: none;"
+													width="360" height="135"
+													xlink:href="./public/assets/Img/Circuito3/cable3a.png"
+													transform="matrix(0.5475 5.114905e-02 7.386942e-02 -0.7907 308.4113 247.7515)">
+											</image>
+									</g>
+									<g id="Cable3" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;pointer-events: none;"
+													width="85" height="236"
+													xlink:href="./public/assets/Img/Circuito3/cable4.png"
+													transform="matrix(0.8732 0.1563 -0.1563 0.8732 556.8441 164.8519)">
+											</image>
+									</g>
+									<g id="Cable4" style="outline: none;">
+
+											<image style="overflow:visible;outline: none;pointer-events: none;"
+													width="172" height="177"
+													xlink:href="./public/assets/Img/Circuito3/cable3.png"
+													transform="matrix(1.0188 -8.564349e-02 6.009902e-02 0.7149 324.3603 292.5089)">
+											</image>
+									</g>
+							</svg>
 					</div>
-				<div>
 			</div>
-		</div>
-	</div>`
+	</div>
+</div>`
 
 
 
