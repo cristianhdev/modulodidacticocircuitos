@@ -735,13 +735,6 @@ function verificarPasosC2() {
 			let portalampara2c1Img = document.querySelector(`#${elementosImagenSvgC2[3].id} > image`)
 			let InterruptorClick=false
 
-			
-
-			console.log(interruptorc2)
-			console.log(interruptorc2Img)
-			console.log(portalampara1c1)
-			console.log(portalampara2c1)
-
 
 			interruptorc2.addEventListener('click', (e) => {
 				if(InterruptorClick==false){
@@ -756,8 +749,6 @@ function verificarPasosC2() {
 					InterruptorClick=!InterruptorClick
 				}
 				
-				/* portalampara1c1.classList.toggle('portalampara-1-on')
-				portalampara2c1.classList.toggle('portalampara-2-on') */
 			}, false)
 
 
@@ -1269,12 +1260,12 @@ function ReiniciarCircuito2() {
 		<image style="overflow:visible;outline: none;" width="144" height="112" xlink:href="./public/assets/Img/Circuito2/PilasJuntas-c2.png"  transform="matrix(1.3298 0 0 1.3298 158.794 312.8565)">
 	</image>
 </g>
-<g id="Interruptor1">
+<g id="Interruptor1" style="outline: none;">
 	
 		<image style="overflow:visible;outline: none;" width="38" height="66" xlink:href="./public/assets/Img/Circuito2/iterruptor1.png"  transform="matrix(1.6787 0 0 1.6787 314.6841 97)">
 	</image>
 </g>
-<g id="Cable4">
+<g id="Cable4" >
 	<image style="overflow:visible;outline: none;" width="107" height="120" xlink:href="./public/assets/Img/Circuito2/cable2.png"  transform="matrix(0.785 0 0 0.7 509 161)">
 	</image>
 </g>
