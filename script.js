@@ -184,6 +184,7 @@ let elementosPermitidosActividad1 = [
 /** Fin configuracion actividad 1 */
 
 /** Configuracion actividad 2 */
+let elementosImagenSvgC2;
 let tituloCircuito2 = '¡Construyamos un Circuito Serie!'
 let contadorCableC2 = 0
 let instruccionesActividade2 = [
@@ -236,50 +237,7 @@ let pasosActividad2 = [
 				`
 ]
 
-let areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
-<div>
-			<div style="
-			width: 86%;
-			height: 44vh;
-			position: absolute;
-			top: 11px;
-			left: 82px;
-			margin: 0px auto;
-		">
-					<div class="portapilas">
-
-					</div>
-					<div class="pilas-c2">
-
-					</div>
-					<div class="cable1">
-
-					</div>
-					<div class="interruptor">
-
-					</div>
-					<div class="cable2">
-
-					</div>
-					<div class="portalampara-1">
-
-					</div>
-					<div class="cable3">
-
-					</div>
-					<div class="portalampara-2">
-
-					</div>
-					<div class="cable4">
-
-		</div>
-			</div>
-			<div>
-
-			</div>
-
-	</div>
-</div>`
+let areaCollision2 = ``
 
 
 
@@ -588,114 +546,7 @@ function drop(ev) {
 }
 
 
-function MostrarPartesCircuito1(figura_dragId) {
 
-	if (figura_dragId == 'elemento-6') {
-		document.querySelector('.aluminio').style.visibility = 'visible'
-	}
-	if (figura_dragId == 'elemento-8' && contadorPilasC1 == 0) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		document.querySelector('.pilas').classList.remove('pila2')
-		document.querySelector('.pilas').classList.add('pila1')
-		/* document.querySelector('.pilas').style.backgroundImage = 'url(./public/assets/Img/Circuito/pilas-cinta-1.png)' */
-		contadorPilasC1++
-	} else if (figura_dragId == 'elemento-8' && contadorPilasC1 == 1) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		document.querySelector('.pilas').classList.remove('pila1')
-		document.querySelector('.pilas').classList.add('pila2')
-		/* document.querySelector('.pilas').style.backgroundImage = 'url(./public/assets/Img/Circuito/pilas-cinta-2.png)' */
-		contadorPilasC1++
-	}
-	if (figura_dragId == 'elemento-0' && contadorCitasC1 == 0) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		/* document.querySelector('.pilas-cinta').style.visibility = 'visible' */
-		/* document.querySelector('.pilas').classList.remove('pilas') */
-		document.querySelector('.pilas').classList.add('pilas-cinta-1')
-		contadorCitasC1++
-	} else if (figura_dragId == 'elemento-0' && contadorCitasC1 == 1) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		/* document.querySelector('.pilas-cinta').style.visibility = 'visible' */
-		/* document.querySelector('.pilas').classList.remove("pilas-cinta-1") */
-		document.querySelector('.pilas').classList.add("pilas-cinta-2")
-		contadorCitasC1++
-	}
-	if (figura_dragId == 'elemento-5') {
-		document.querySelector('.luz-led').style.visibility = 'visible'
-		document.querySelector('#aluminio').classList.remove('aluminio')
-		document.querySelector('#aluminio').classList.add('aluminio-2')
-
-
-	}
-}
-
-function MostrarPartesCircuito2(figura_dragId) {
-	if (figura_dragId == 'elemento-4') {
-		document.querySelector('.portapilas').style.visibility = 'visible'
-	}
-	if (figura_dragId == 'elemento-3') {
-		document.querySelector('.pilas-c2').style.visibility = 'visible'
-	}
-	if (figura_dragId == 'elemento-1') {
-		document.querySelector('.interruptor').style.visibility = 'visible'
-		/* document.querySelector('.pilas').style.backgroundImage="url('./public/assets/Img/Circuito/pilas-cinta.png');" */
-	}
-	if (figura_dragId == 'elemento-7') {
-		document.querySelector('.portalampara-1').style.visibility = 'visible'
-		document.querySelector('.portalampara-2').style.visibility = 'visible'
-
-	}
-
-	if (figura_dragId == 'elemento-9' && contadorCableC2 == 0) {
-		contadorCableC2++
-		document.querySelector('.cable1').style.visibility = 'visible'
-		/* document.querySelector('.cable2').style.visibility = 'visible'
-		document.querySelector('.cable3').style.visibility = 'visible'
-		document.querySelector('.cable4').style.visibility = 'visible' */
-	} else if (figura_dragId == 'elemento-9' && contadorCableC2 == 1) {
-		contadorCableC2++
-		document.querySelector('.cable2').style.visibility = 'visible'
-	}
-	else if (figura_dragId == 'elemento-9' && contadorCableC2 == 2) {
-		contadorCableC2++
-		document.querySelector('.cable3').style.visibility = 'visible'
-	}
-	else if (figura_dragId == 'elemento-9' && contadorCableC2 == 3) {
-		contadorCableC2++
-		document.querySelector('.cable4').style.visibility = 'visible'
-	}
-}
-
-function MostrarPartesCircuito3(figura_dragId) {
-	if (figura_dragId == 'elemento-2') {
-		document.querySelector('.pila-cuadrada').style.visibility = 'visible'
-	}
-	if (figura_dragId == 'elemento-1') {
-		document.querySelector('.interruptor-c3').style.visibility = 'visible'
-	}
-	if (figura_dragId == 'elemento-7') {
-		document.querySelector('.portalampara-2-c3').style.visibility = 'visible'
-
-	}
-	if (figura_dragId == 'elemento-22') {
-		document.querySelector('.caja_plastica').style.visibility = 'visible'
-	}
-	if (figura_dragId == 'elemento-9' && contadorCableC3 == 0) {
-		document.querySelector('.cable1-c3').style.visibility = 'visible'
-		contadorCableC3++
-		/* document.querySelector('.cable2-c3').style.visibility = 'visible'
-		document.querySelector('.cable3-c3').style.visibility = 'visible'
-		document.querySelector('.cable4-c3').style.visibility = 'visible' */
-	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 1) {
-		document.querySelector('.cable2-c3').style.visibility = 'visible'
-		contadorCableC3++
-	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 2) {
-		document.querySelector('.cable4-c3').style.visibility = 'visible'
-		contadorCableC3++
-	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 3) {
-		document.querySelector('.cable3-c3').style.visibility = 'visible'
-		contadorCableC3++
-	}
-}
 
 function menu(opcion) {
 	switch (opcion) {
@@ -788,6 +639,11 @@ function iniciar(actividad) {
 			document.querySelector('#comenzar').style.display = 'none'
 			document.querySelector('.contenedor-instrucciones').innerHTML = ''
 			document.querySelector('.contenedor-instrucciones').innerHTML = areaCollision2
+			elementosImagenSvgC2 = document.querySelectorAll('g')
+			console.log(elementosImagenSvgC2)
+			elementosImagenSvgC2.forEach(element => {
+				element.style.visibility = 'hidden'
+			});
 
 			mostrarPasosActividad2()
 			AlatoriosImagen()
@@ -871,23 +727,45 @@ function verificarPasosC2() {
 			mostrarPasosActividad2()
 			break;
 		case 8:
-			let interruptorc1 = document.querySelector('.interruptor')
-			let portalampara1c1 = document.querySelector('.portalampara-1')
-			let portalampara2c1 = document.querySelector('.portalampara-2')
+			let interruptorc2 = document.querySelector(`#${elementosImagenSvgC2[8].id}`)
+			let interruptorc2Img = document.querySelector(`#${elementosImagenSvgC2[8].id} > image`)
+			let portalampara1c1 = document.querySelector(`#${elementosImagenSvgC2[2].id}`)
+			let portalampara1c1Img = document.querySelector(`#${elementosImagenSvgC2[2].id} > image`)
+			let portalampara2c1 = document.querySelector(`#${elementosImagenSvgC2[3].id}`)
+			let portalampara2c1Img = document.querySelector(`#${elementosImagenSvgC2[3].id} > image`)
+			let InterruptorClick=false
+
+			
+
+			console.log(interruptorc2)
+			console.log(interruptorc2Img)
+			console.log(portalampara1c1)
+			console.log(portalampara2c1)
 
 
-			interruptorc1.addEventListener('click', (e) => {
-				interruptorc1.classList.toggle('interruptor-on')
-				portalampara1c1.classList.toggle('portalampara-1-on')
-				portalampara2c1.classList.toggle('portalampara-2-on')
+			interruptorc2.addEventListener('click', (e) => {
+				if(InterruptorClick==false){
+					interruptorc2Img.setAttribute('xlink:href','./public/assets/Img/Circuito2/interruptor2.png')
+					portalampara1c1Img.setAttribute('xlink:href','./public/assets/Img/Circuito2/portalampara-encendida.png')
+					portalampara2c1Img.setAttribute('xlink:href','./public/assets/Img/Circuito2/portalampara-encendida.png')
+					InterruptorClick=!InterruptorClick
+				}else{
+					interruptorc2Img.setAttribute('xlink:href','./public/assets/Img/Circuito2/iterruptor1.png')
+					portalampara1c1Img.setAttribute('xlink:href','./public/assets/Img/Circuito2/portalampara.png')
+					portalampara2c1Img.setAttribute('xlink:href','./public/assets/Img/Circuito2/portalampara.png')
+					InterruptorClick=!InterruptorClick
+				}
+				
+				/* portalampara1c1.classList.toggle('portalampara-1-on')
+				portalampara2c1.classList.toggle('portalampara-2-on') */
 			}, false)
 
 
-			tippy(`.interruptor`, {
+			tippy(`#${elementosImagenSvgC2[8].id}`, {
 				content: 'Clic aqui',
 				theme: 'material',
 
-			});
+			}); 
 
 			pasosActividad2.shift()
 			mostrarPasosActividad2()
@@ -943,6 +821,119 @@ function verificarPasosC3() {
 
 
 
+}
+
+
+function MostrarPartesCircuito1(figura_dragId) {
+
+	if (figura_dragId == 'elemento-6') {
+		document.querySelector('.aluminio').style.visibility = 'visible'
+	}
+	if (figura_dragId == 'elemento-8' && contadorPilasC1 == 0) {
+		document.querySelector('.pilas').style.visibility = 'visible'
+		document.querySelector('.pilas').classList.remove('pila2')
+		document.querySelector('.pilas').classList.add('pila1')
+		/* document.querySelector('.pilas').style.backgroundImage = 'url(./public/assets/Img/Circuito/pilas-cinta-1.png)' */
+		contadorPilasC1++
+	} else if (figura_dragId == 'elemento-8' && contadorPilasC1 == 1) {
+		document.querySelector('.pilas').style.visibility = 'visible'
+		document.querySelector('.pilas').classList.remove('pila1')
+		document.querySelector('.pilas').classList.add('pila2')
+		/* document.querySelector('.pilas').style.backgroundImage = 'url(./public/assets/Img/Circuito/pilas-cinta-2.png)' */
+		contadorPilasC1++
+	}
+	if (figura_dragId == 'elemento-0' && contadorCitasC1 == 0) {
+		document.querySelector('.pilas').style.visibility = 'visible'
+		/* document.querySelector('.pilas-cinta').style.visibility = 'visible' */
+		/* document.querySelector('.pilas').classList.remove('pilas') */
+		document.querySelector('.pilas').classList.add('pilas-cinta-1')
+		contadorCitasC1++
+	} else if (figura_dragId == 'elemento-0' && contadorCitasC1 == 1) {
+		document.querySelector('.pilas').style.visibility = 'visible'
+		/* document.querySelector('.pilas-cinta').style.visibility = 'visible' */
+		/* document.querySelector('.pilas').classList.remove("pilas-cinta-1") */
+		document.querySelector('.pilas').classList.add("pilas-cinta-2")
+		contadorCitasC1++
+	}
+	if (figura_dragId == 'elemento-5') {
+		document.querySelector('.luz-led').style.visibility = 'visible'
+		document.querySelector('#aluminio').classList.remove('aluminio')
+		document.querySelector('#aluminio').classList.add('aluminio-2')
+
+
+	}
+}
+
+function MostrarPartesCircuito2(figura_dragId) {
+	if (figura_dragId == 'elemento-4') {
+		elementosImagenSvgC2[6].style.visibility = 'visible'
+	}
+	if (figura_dragId == 'elemento-3') {
+		elementosImagenSvgC2[7].style.visibility = 'visible'
+	}
+	if (figura_dragId == 'elemento-1') {
+		elementosImagenSvgC2[8].style.visibility = 'visible'
+		/* document.querySelector('.pilas').style.backgroundImage="url('./public/assets/Img/Circuito/pilas-cinta.png');" */
+	}
+
+	if (figura_dragId == 'elemento-9' && contadorCableC2 == 0) {
+		contadorCableC2++
+		elementosImagenSvgC2[1].style.visibility = 'visible'
+
+	} else if (figura_dragId == 'elemento-9' && contadorCableC2 == 1) {
+		contadorCableC2++
+		elementosImagenSvgC2[4].style.visibility = 'visible'
+	} else if (figura_dragId == 'elemento-9' && contadorCableC2 == 2) {
+		contadorCableC2++
+		elementosImagenSvgC2[9].style.visibility = 'visible'
+		/* document.querySelector('.cable3').style.visibility = 'visible' */
+	}
+	else if (figura_dragId == 'elemento-9' && contadorCableC2 == 3) {
+		contadorCableC2++
+		elementosImagenSvgC2[5].style.visibility = 'visible'
+	}
+
+	//Bombillos
+	if (figura_dragId == 'elemento-7') {
+		elementosImagenSvgC2[2].style.visibility = 'visible'
+		elementosImagenSvgC2[3].style.visibility = 'visible'
+
+	}
+
+
+
+}
+
+function MostrarPartesCircuito3(figura_dragId) {
+	if (figura_dragId == 'elemento-2') {
+		document.querySelector('.pila-cuadrada').style.visibility = 'visible'
+	}
+	if (figura_dragId == 'elemento-1') {
+		document.querySelector('.interruptor-c3').style.visibility = 'visible'
+	}
+	if (figura_dragId == 'elemento-7') {
+		document.querySelector('.portalampara-2-c3').style.visibility = 'visible'
+
+	}
+	if (figura_dragId == 'elemento-22') {
+		document.querySelector('.caja_plastica').style.visibility = 'visible'
+	}
+	if (figura_dragId == 'elemento-9' && contadorCableC3 == 0) {
+		document.querySelector('.cable1-c3').style.visibility = 'visible'
+		contadorCableC3++
+		/* document.querySelector('.cable2-c3').style.visibility = 'visible'
+		document.querySelector('.cable3-c3').style.visibility = 'visible'
+		document.querySelector('.cable4-c3').style.visibility = 'visible' */
+	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 1) {
+		document.querySelector('.cable2-c3').style.visibility = 'visible'
+		contadorCableC3++
+	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 2) {
+		document.querySelector('.cable4-c3').style.visibility = 'visible'
+		contadorCableC3++
+	} else if (figura_dragId == 'elemento-9' && contadorCableC3 == 3) {
+		document.querySelector('.cable3-c3').style.visibility = 'visible'
+		contadorCableC3++
+	}
 }
 
 function AlatoriosImagen() {
@@ -1183,10 +1174,10 @@ function ReiniciarCircuito1() {
 
 
 function ReiniciarCircuito2() {
-tituloCircuito2 = '¡Construyamos un Circuito Serie!'
-contadorCableC2 = 0
-instruccionesActividade2 = [
-	`<div class="animate__animated animate__fadeIn">
+	tituloCircuito2 = '¡Construyamos un Circuito Serie!'
+	contadorCableC2 = 0
+	instruccionesActividade2 = [
+		`<div class="animate__animated animate__fadeIn">
 	<h4>!Vamos a diseñar, ensamblar y dibujar un circuito!</h4>
                             <p>Desplazamos del centro de recursos los siguientes elementos:</p> 
 							<ul style="text-align: left;">
@@ -1198,54 +1189,102 @@ instruccionesActividade2 = [
 							</ul>
 							<div style="width: 50%;margin:0px auto;"><div onclick="iniciar(2)" id="comenzar" class="button" >Comenzar&nbsp;▶</div></div>
 	</div>`
-]
+	]
 
-pasosActividad2 = [
-	`<div class="animate__animated animate__fadeIn">
+	pasosActividad2 = [
+		`<div class="animate__animated animate__fadeIn">
 	<h4>Pasos</h4>
 	 <ol>
                                 <li><span>Al portapilas le colocamos las pilas AA. Con el cable de pinzas caimán conectamos un extremo al portapilas, y el otro extremo a uno de los terminales del interruptor.</span></li>
                                
                             </ol>
 		</div>`,
-	`<div class="animate__animated animate__fadeIn">
+		`<div class="animate__animated animate__fadeIn">
 		<h4>Pasos</h4>
 		 <ol start="2">
 									<li><span>Conectamos una pinza caimán, de otro cable, desde un terminal del interruptor a uno de los terminales del portalámparas (nos aseguramos de colocar el bombillo correspondiente previamente).</span></li>
 								</ol>
 			</div>`,
-	`<div>
+		`<div>
 			<h4>Pasos</h4>
 			 <ol start="3">
 										<li><span>Conectamos otro cable del terminal del portalámparas a un terminal del segundo portalámparas</span></li>
 									</ol>
 				</div>`,
-	`<div>
+		`<div>
 				<h4>Pasos</h4>
 				 <ol start="4">
 											<li><span>Conectamos un cable del otro terminal del segundo portalámparas al otro terminal del portalámparas</span></li>
 										</ol>
 					</div>`,
-	`
+		`
 				<div class="animate__animated animate__fadeIn">
 		<h4>Pasos</h4>
 		<p>!Muy bien¡</p>
 		<p>Ahora inténtalo, acciona el interruptor.</p>
 		</div>
 				`
-]
+	]
 
-areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
+	areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
 <div>
-			<div style="
-			width: 86%;
-			height: 44vh;
-			position: absolute;
-			top: 11px;
-			left: 82px;
-			margin: 0px auto;
-		">
-					<div class="portapilas">
+			<div class="contenedor-svg">
+		<div >
+		<svg version="1.1" class="responsive-c2"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+<g id="CapaInicial">
+</g>
+<g id="Cable1">
+	
+		<image style="overflow:visible;outline: none;" width="120" height="137" xlink:href="./public/assets/Img/Circuito2/37.png"  transform="matrix(-0.1167 -1.2219 1.2219 -0.1167 181.2849 331.5068)">
+	</image>
+</g>
+<g id="Portalampara2">
+	
+		<image style="overflow:visible;outline: none;" width="246" height="171" xlink:href="./public/assets/Img/Circuito2/portalampara.png"  transform="matrix(0.7154 0 0 0.6608 503 177)">
+	</image>
+</g>
+<g id="Portalampara1">
+	
+		<image style="overflow:visible;outline: none;" width="246" height="171" xlink:href="./public/assets/Img/Circuito2/portalampara.png"  transform="matrix(0.6891 0 0 0.6891 403 126)">
+	</image>
+</g>
+<g id="Cable2">
+	
+		<image style="overflow:visible;outline: none;" width="85" height="236" xlink:href="./public/assets/Img/Circuito2/cable4.png"  transform="matrix(0.4477 0.8942 0.5948 -0.2978 303.0479 215.162)">
+	</image>
+</g>
+<g id="Cable3">
+	
+		<image style="overflow:visible;outline: none;" width="360" height="135" xlink:href="./public/assets/Img/Circuito2/cable3.png"  transform="matrix(0.817 -0.3937 0.4341 0.9009 313.4775 316.2836)">
+	</image>
+</g>
+<g id="Portapila">
+	
+		<image style="overflow:visible;outline: none;" width="134" height="114" xlink:href="./public/assets/Img/Circuito2/portapilas.png"  transform="matrix(1.4403 0 0 1.4403 153 309)">
+	</image>
+</g>
+<g id="Pilas">
+	
+		<image style="overflow:visible;outline: none;" width="144" height="112" xlink:href="./public/assets/Img/Circuito2/PilasJuntas-c2.png"  transform="matrix(1.3298 0 0 1.3298 158.794 312.8565)">
+	</image>
+</g>
+<g id="Interruptor1">
+	
+		<image style="overflow:visible;outline: none;" width="38" height="66" xlink:href="./public/assets/Img/Circuito2/iterruptor1.png"  transform="matrix(1.6787 0 0 1.6787 314.6841 97)">
+	</image>
+</g>
+<g id="Cable4">
+	<image style="overflow:visible;outline: none;" width="107" height="120" xlink:href="./public/assets/Img/Circuito2/cable2.png"  transform="matrix(0.785 0 0 0.7 509 161)">
+	</image>
+</g>
+</svg>
+
+
+		
+		</div>
+		
+					<!--<div class="portapilas">
 
 					</div>
 					<div class="pilas-c2">
@@ -1270,8 +1309,7 @@ areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="a
 
 					</div>
 					<div class="cable4">
-
-		</div>
+		</div> -->
 			</div>
 			<div>
 
@@ -1282,17 +1320,17 @@ areaCollision2 = `<div class="area-collision" ondrop="drop(event)" ondragover="a
 
 
 
-elementosPermitidosActividad2 = [
-	'elemento-4',//Un portapilas.
-	'elemento-3',//Dos pilas AA
-	'elemento-1',//Interruptor
-	'elemento-9',//Pinzas cocodrilo
-	'elemento-7',//Dos Portalámparas
-	'elemento-9',//Pinzas cocodrilo
-	'elemento-9',//Pinzas cocodrilo
-	'elemento-9'//Pinzas cocodrilo
+	elementosPermitidosActividad2 = [
+		'elemento-4',//Un portapilas.
+		'elemento-3',//Dos pilas AA
+		'elemento-1',//Interruptor
+		'elemento-9',//Pinzas cocodrilo
+		'elemento-7',//Dos Portalámparas
+		'elemento-9',//Pinzas cocodrilo
+		'elemento-9',//Pinzas cocodrilo
+		'elemento-9'//Pinzas cocodrilo
 
-]
+	]
 
 }
 
@@ -1313,7 +1351,7 @@ function ReiniciarCircuito3() {
 								<div style="width: 50%;margin:0px auto;"><div onclick="iniciar(3)" id="comenzar" class="button" >Comenzar&nbsp;▶</div></div>
 		</div>`
 	]
-	
+
 	pasosActividad3 = [
 		`<div class="animate__animated animate__fadeIn">
 		<h4>Pasos</h4>
@@ -1347,7 +1385,7 @@ function ReiniciarCircuito3() {
 			</div>
 					`
 	]
-	
+
 	areaCollision3 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
 	<div>
 				<div style="
@@ -1387,9 +1425,9 @@ function ReiniciarCircuito3() {
 			</div>
 		</div>
 	</div>`
-	
-	
-	
+
+
+
 	elementosPermitidosActividad3 = [
 		'elemento-2',//pila 9v
 		'elemento-1',//interruptor,

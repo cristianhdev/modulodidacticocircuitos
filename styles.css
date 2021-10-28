@@ -162,6 +162,20 @@ ol {
 
 /* Ciruito2 */
 
+#circuito2{
+  display:block;
+  visibility: visible;
+}
+
+.contenedor-svg{
+			width: 100%;
+			height: 44vh;
+			position: absolute;
+			/* top: 11px; */
+			/* left: -72px; */
+			margin: 0px auto;
+}
+
 .pilas-c2 {
   display: block;
   visibility: hidden;
@@ -397,8 +411,7 @@ ol {
   position: relative;
   top: 41%;
   left: 65px;
-  transform: rotate(
-71deg) scale(-1, 1);
+  transform: rotate(71deg) scale(-1, 1);
   z-index: 0;
   pointer-events: none;
 }
@@ -459,6 +472,13 @@ ol {
   width: 70%;
   height: auto;
 }
+
+.responsive-c2 {
+  width: 100%;
+  height: 52vh;
+}
+
+
 
 .recuadro-explicacion-1 {
   display: block;
@@ -562,6 +582,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-color: white;
   padding: 12px 0px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .area-collision {
@@ -1125,6 +1149,15 @@ span {
 
   /* Ciruito2 */
 
+  .contenedor-svg{
+    width: auto;
+    height: 44vh;
+    position: absolute;
+    top: 5px;
+    left: -90px;
+    margin: 0px auto;
+}
+
   .pilas-c2 {
     width: 33%;
     height: 37%;
@@ -1273,6 +1306,12 @@ span {
     top: 91px;
     left: 139px;
     transform: rotate(208deg) scale(-1, -1);
+  }
+
+
+  .responsive-c2 {
+    width: 440px;
+    height: 55vh;
   }
 
 }
