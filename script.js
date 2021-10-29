@@ -29,6 +29,7 @@ let contadorPilasC1 = 0;
 let contadorCitasC1 = 0;
 let tituloCircuito1 = '¡Construcción de una linterna!'
 //Configuracion actividad 1
+let elementosImagenSvgC1;
 let nombreElementos = [
 	'Cinta aislante',
 	'Interruptor Palanca',
@@ -122,51 +123,7 @@ let pasosActividad1 = [
 
 
 
-let areaCollision1 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
-<div>
-			<div class="contenedor-elementos-area-colision">
-					<div class="luz-led">
-
-					</div>
-					<div id="aluminio" class="aluminio">
-					
-										</div>
-						
-					</div>
-					<div class="pilas" id="pilas">
-					<div style="
-					display: flex;
-					width: 75%;
-					height: 8vh;
-					justify-content: center;
-					align-items: end;
-					
-				">
-											<div style="
-					
-					width: 86%;
-					height: inherit;
-				">
-											</div>
-											<div id="conexionPilac1" style="
-				width: 13%;
-				height: 8vh;
-				cursor: pointer;
-			
-				">
-											</div>
-					</div>
-					</div>
-					<div class="pilas-cinta" >
-
-					</div>
-			</div>
-			<div>
-
-			</div>
-
-	</div>
-</div>`
+let areaCollision1 = ``
 
 
 
@@ -293,7 +250,7 @@ let pasosActividad3 = [
 	`<div>
 			<h4>Pasos</h4>
 			 <ol start="3">
-										<li><span>Dentro de un reciente plástico, colocamos las puntas metálicas de los cables al fondo del recipiente y vamos agregando agua poco a poco para ver qué pasa.</span></li>
+										<li><span>Dentro de un recipiente plástico, colocamos las puntas metálicas de los cables al fondo del recipiente y vamos agregando agua poco a poco para ver qué pasa.</span></li>
 									</ol>
 				</div>`,
 	`<div>
@@ -590,6 +547,10 @@ function iniciar(actividad) {
 			document.querySelector('.contenedor-instrucciones').innerHTML = ` `
 			document.querySelector('.contenedor-instrucciones').innerHTML = areaCollision1
 
+			elementosImagenSvgC1 = document.querySelectorAll('g')
+			elementosImagenSvgC1.forEach(element => {
+				element.style.visibility = 'hidden'
+			});
 
 			mostrarPasosActividad1()
 			AlatoriosImagen()
@@ -649,20 +610,36 @@ function verificarPasosC1() {
 
 			pasosActividad1.shift()
 			mostrarPasosActividad1()
-			let conexcionPilac1 = document.querySelector('#conexionPilac1')
+			let unionc1 = document.querySelector(`#${elementosImagenSvgC1[2].id}`)
+			let unionc1Img = document.querySelector(`#${elementosImagenSvgC1[2].id} > image`)
+			let ledc1Img = document.querySelector(`#${elementosImagenSvgC1[0].id} > image`)
+			let ledClick=false
 
-			let luzLed = document.querySelector('.luz-led')
+			document.querySelector(`#${elementosImagenSvgC1[1].id}`).style.visibility="hidden"
+			document.querySelector(`#${elementosImagenSvgC1[2].id}`).style.visibility="visible"
+			document.querySelector(`#${elementosImagenSvgC1[3].id}`).style.visibility="visible"
 
-			conexcionPilac1.addEventListener('click', (e) => {
-				luzLed.classList.toggle('luz-led-on')
+			unionc1.style.cursor='pointer'
+
+			unionc1.addEventListener('click', (e) => {
+				if(ledClick==false){
+					ledc1Img.setAttribute('xlink:href','./public/assets/Img/Circuito/Led-luz.png')
+					unionc1Img.setAttribute('transform','matrix(0.9984 5.626319e-02 -5.626319e-02 0.9984 411.4579 210.1423)')
+					ledClick=!ledClick
+				}else{
+					ledc1Img.setAttribute('xlink:href','./public/assets/Img/Circuito/Led.png')
+					unionc1Img.setAttribute('transform','matrix(1 0 0 1 409 209)')
+					ledClick=!ledClick
+				}
+				
 			}, false)
 
 
-			tippy(`#conexionPilac1`, {
-				content: 'Clic para unir',
+			tippy(`#${elementosImagenSvgC1[2].id}`, {
+				content: 'Clic aqui',
 				theme: 'material',
 
-			});
+			}); 
 			break;
 		default:
 			break;
@@ -794,41 +771,29 @@ function verificarPasosC3() {
 
 function MostrarPartesCircuito1(figura_dragId) {
 
+	console.log(elementosImagenSvgC1)
+
+
 	if (figura_dragId == 'elemento-6') {
-		document.querySelector('.aluminio').style.visibility = 'visible'
+		//document.querySelector('.aluminio').style.visibility = 'visible'
+		elementosImagenSvgC1[1].style.visibility = 'visible'
 	}
 	if (figura_dragId == 'elemento-8' && contadorPilasC1 == 0) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		document.querySelector('.pilas').classList.remove('pila2')
-		document.querySelector('.pilas').classList.add('pila1')
-		/* document.querySelector('.pilas').style.backgroundImage = 'url(./public/assets/Img/Circuito/pilas-cinta-1.png)' */
+		elementosImagenSvgC1[4].style.visibility = 'visible'
 		contadorPilasC1++
 	} else if (figura_dragId == 'elemento-8' && contadorPilasC1 == 1) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		document.querySelector('.pilas').classList.remove('pila1')
-		document.querySelector('.pilas').classList.add('pila2')
-		/* document.querySelector('.pilas').style.backgroundImage = 'url(./public/assets/Img/Circuito/pilas-cinta-2.png)' */
+		elementosImagenSvgC1[5].style.visibility = 'visible'
 		contadorPilasC1++
 	}
 	if (figura_dragId == 'elemento-0' && contadorCitasC1 == 0) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		/* document.querySelector('.pilas-cinta').style.visibility = 'visible' */
-		/* document.querySelector('.pilas').classList.remove('pilas') */
-		document.querySelector('.pilas').classList.add('pilas-cinta-1')
+		elementosImagenSvgC1[6].style.visibility = 'visible'
 		contadorCitasC1++
 	} else if (figura_dragId == 'elemento-0' && contadorCitasC1 == 1) {
-		document.querySelector('.pilas').style.visibility = 'visible'
-		/* document.querySelector('.pilas-cinta').style.visibility = 'visible' */
-		/* document.querySelector('.pilas').classList.remove("pilas-cinta-1") */
-		document.querySelector('.pilas').classList.add("pilas-cinta-2")
+		elementosImagenSvgC1[7].style.visibility = 'visible'
 		contadorCitasC1++
 	}
 	if (figura_dragId == 'elemento-5') {
-		document.querySelector('.luz-led').style.visibility = 'visible'
-		document.querySelector('#aluminio').classList.remove('aluminio')
-		document.querySelector('#aluminio').classList.add('aluminio-2')
-
-
+		elementosImagenSvgC1[0].style.visibility = 'visible'
 	}
 }
 
@@ -1083,48 +1048,55 @@ function ReiniciarCircuito1() {
 
 	areaCollision1 = `<div class="area-collision" ondrop="drop(event)" ondragover="allowDrop(event)" >
 	<div>
-				<div class="contenedor-elementos-area-colision">
-						<div class="luz-led">
-	
-						</div>
-						<div id="aluminio" class="aluminio">
-						
-											</div>
-							
-						</div>
-						<div class="pilas" id="pilas">
-						<div style="
-						display: flex;
-						width: 75%;
-						height: 8vh;
-						justify-content: center;
-						align-items: end;
-						
-					">
-												<div style="
-						
-						width: 86%;
-						height: inherit;
-					">
-												</div>
-												<div id="conexionPilac1" style="
-					width: 13%;
-					height: 8vh;
-					cursor: pointer;
-				
-					">
-												</div>
-						</div>
-						</div>
-						<div class="pilas-cinta" >
-	
-						</div>
-				</div>
-				<div>
-	
-				</div>
-	
-		</div>
+			<div class="contenedor-svg">
+					<div>
+						<svg version="1.1" class="responsive-c2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+						<g id="LuzLed" style="outline: none;">
+								<image style="overflow:visible;" width="176" height="175" xlink:href="./public/assets/Img/Circuito/Led.png"
+										transform="matrix(1 0 0 1 320 115)">
+								</image>
+						</g>
+						<g id="Aluminio" style="outline: none;">
+		
+								<image style="overflow:visible;" width="750" height="377"
+										xlink:href="./public/assets/Img/Animaciones/aluminio3.gif" transform="matrix(1 0 0 1 -23 96)">
+								</image>
+						</g>
+						<g id="ParteAluminio1" style="outline: none;">
+								<image style="overflow:visible;" width="178" height="189" xlink:href="./public/assets/Img/Circuito/parte-aluminio.png"
+										transform="matrix(1 0 0 1 409 209)">
+								</image>
+						</g>
+						<g id="ParteAluminio2" style="outline: none;">
+		
+								<image style="overflow:visible;" width="178" height="189" xlink:href="./public/assets/Img/Circuito/parte-aluminio.png"
+										transform="matrix(-1 0 0 1 408 215)">
+								</image>
+						</g>
+						<g id="Pila1" style="outline: none;">
+								<image style="overflow:visible;" width="320" height="77" xlink:href="./public/assets/Img/Circuito/pilas-cinta-1.png"
+										transform="matrix(1 0 0 1 242 337)">
+								</image>
+						</g>
+						<g id="Pila2" style="outline: none;">
+								<image style="overflow:visible;" width="320" height="77" xlink:href="./public/assets/Img/Circuito/pilas-cinta-2.png"
+										transform="matrix(1 0 0 1 242 337)">
+								</image>
+						</g>
+						<g id="PilaCinta1" style="outline: none;">
+								<image style="overflow:visible;" width="320" height="77" xlink:href="./public/assets/Img/Circuito/pilas-cinta-1a.png"
+										transform="matrix(1 0 0 1 242 337)">
+								</image>
+						</g>
+						<g id="PilaCinta2" style="outline: none;">
+								<image style="overflow:visible;" width="320" height="77" xlink:href="./public/assets/Img/Circuito/pilas-cinta-1b.png"
+										transform="matrix(1 0 0 1 242 337)">
+								</image>
+						</g>
+				</svg>
+					</div>
+			<div>
 	</div>`
 
 
